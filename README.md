@@ -123,9 +123,10 @@ npm run dev
 
 ---
 
-## 📂 7. Project Presentation
+## 📂 7. Project Presentation & Certificate
 
 - 📊 **Official Presentation (PPTX):** [`docs/presentation/SIH2026-IDEA-Presentation Team Strophoid.pptx`](docs/presentation/SIH2026-IDEA-Presentation%20Team%20Strophoid.pptx)
+- 📜 **Official SIH Certificate of Participation (PDF):** [`docs/certificate/BU_SIH26_Certificate_of_Participation_Ishan_Gupta.pdf`](docs/certificate/BU_SIH26_Certificate_of_Participation_Ishan_Gupta.pdf)
 
 ---
 *Built with ❤️ by **Team Strophoid** for Smart India Hackathon 2026.*
