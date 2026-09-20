@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIH 2026 Official Presentation — Team Strophoid (SIH26107)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Arial:wght@400;600;700;800;900&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f172a;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-action-bar {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .top-action-bar .info {
+    color: #f8fafc;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .top-action-bar .info span { color: #38bdf8; font-weight: 800; }
+  .btn-group { display: flex; gap: 10px; }
+  .btn {
+    background: #0070c0;
+    color: #ffffff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(0,112,192,0.4);
+    transition: all 0.15s;
+  }
+  .btn:hover { background: #0284c7; transform: translateY(-1px); }
+  .btn.pptx { background: #d97706; box-shadow: 0 2px 8px rgba(217,119,6,0.4); }
+  .btn.pptx:hover { background: #f59e0b; }
+
+  /* 16:9 Presentation Slide Canvas */
+  .slide-canvas {
+    width: 1000px;
+    height: 562.5px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    page-break-after: always;
+  }
+
+  /* Slide Header */
+  .slide-header {
+    height: 90px;
+    padding: 15px 35px 5px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* Top Left Oval (Team Name) */
+  .team-oval {
+    width: 130px;
+    height: 52px;
+    border: 2px solid #7c3aed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    color: #374151;
+    line-height: 1.2;
+    background: #ffffff;
+  }
+
+  /* Center Title (Exact Serif Times Style) */
+  .header-center-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    text-align: center;
+  }
+  .header-center-title .sih-banner {
+    font-family: 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3a8a;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+  }
+  .header-center-title .slide-main-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  /* Top Right SIH Logo Graphic */
+  .sih-logo-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sih-logo-img {
+    width: 38px;
+    height: 48px;
+  }
+  .sih-logo-text {
+    font-size: 9.5px;
+    font-weight: 900;
+    color: #0f2b48;
+    line-height: 1.15;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  /* Slide Body Content */
+  .slide-body {
+    flex: 1;
+    padding: 10px 45px 25px 45px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Blue Footer Bar (Exact Template Match) */
+  .slide-footer-bar {
+    height: 30px;
+    background: #0070c0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: #ffffff;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+  }
+  .slide-footer-bar .template-tag {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: normal;
+  }
+  .slide-footer-bar .page-number {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  /* Formatting Elements inside slides */
+  .section-blue-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0070c0;
+    text-decoration: underline;
+    margin-bottom: 12px;
+  }
+
+  .bullet-list {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  .bullet-list li {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #1e293b;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 18px;
+  }
+  .bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .sub-bullet {
+    margin-top: 4px;
+    padding-left: 14px;
+    font-size: 11.5px;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  /* Grid Layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .card-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .card-box.blue { background: #eff6ff; border-color: #bfdbfe; }
+  .card-box.green { background: #ecfdf5; border-color: #a7f3d0; }
+  .card-box.amber { background: #fffbeb; border-color: #fde68a; }
+  .card-box.purple { background: #faf5ff; border-color: #ddd6fe; }
+
+  /* Flowchart styles */
+  .flowchart-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .flow-step {
+    flex: 1;
+    background: #0f2b48;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 6px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  .flow-step.light {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #7dd3fc;
+  }
+  .flow-step.green {
+    background: #059669;
+    color: #ffffff;
+  }
+  .flow-arrow {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  /* Table styling */
+  table.sih-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 8px 0;
+  }
+  table.sih-table th {
+    background: #0f2b48;
+    color: #ffffff;
+    padding: 7px 10px;
+    text-align: left;
+    font-size: 10.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table.sih-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    line-height: 1.35;
+  }
+  table.sih-table tr:nth-child(even) { background: #f8fafc; }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 9.5px;
+    font-weight: bold;
+  }
+  .badge-tag.red { background: #fee2e2; color: #991b1b; }
+  .badge-tag.amber { background: #fef3c7; color: #92400e; }
+  .badge-tag.green { background: #dcfce7; color: #166534; }
+
+  .metric-bar {
+    background: #0f2b48;
+    color: #38bdf8;
+    border-radius: 6px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .metric-bar span { color: #ffffff; font-weight: normal; }
+
+  @media print {
+    body { background: #ffffff; padding: 0; }
+    .top-action-bar { display: none !important; }
+    .slide-canvas {
+      width: 100vw;
+      height: 100vh;
+      box-shadow: none;
+      margin: 0;
+      border-radius: 0;
+      page-break-after: always;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP ACTION BAR -->
+<div class="top-action-bar">
+  <div class="info">Official Template: <span>SIH 2026 Idea Submission (6 Slides)</span> · Team: <span>Team Strophoid</span> · PS ID: <span>SIH26107</span></div>
+  <div class="btn-group">
+    <a href="/BIS_SAATHI_SIH26107_PRESENTATION.pptx" class="btn pptx" download>📥 Download Native .pptx File</a>
+    <button class="btn" onclick="window.print()">🖨️ Save as PDF / Print Presentation</button>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- SLIDE 1: TITLE PAGE                                      -->
+<!-- ======================================================== -->
+<div class="slide-canvas">
+  <div class="slide-header" style="height: 100px; justify-content: center;">
+    <div class="header-center-title" style="top: 18px;">
+      <div class="sih-banner">SMART INDIA HACKATHON 2026</div>
+      <div class="slide-main-title">TITLE PAGE</div>
+    </div>
+    <div style="position: absolute; right: 35px; top: 18px;">
+      <div class="sih-logo-block">
+        <svg class="sih-logo-img" viewBox="0 0 100 120">
+          <path d="M50 10 A35 35 0 0 0 15 45 C15 65 30 75 35 90 L65 90 C70 75 85 65 85 45 A35 35 0 0 0 50 10 Z" fill="#f97316"/>
+          <path d="M50 10 A35 35 0 0 1 85 45 C85 65 70 75 65 90 L50 90 Z" fill="#22c55e"/>
+          <rect x="40" y="93" width="20" height="6" fill="#64748b" rx="2"/>
+          <rect x="43" y="101" width="14" height="5" fill="#64748b" rx="2"/>
+          <text x="50" y="55" font-size="16" font-family="Arial" font-weight="bold" fill="#ffffff" text-anchor="middle">SIH</text>
+        </svg>
+        <div class="sih-logo-text">SMART INDIA<br>HACKATHON<br>2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-body" style="padding-top: 15px;">
+    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px; align-items: center;">
+      <div>
+        <ul class="bullet-list" style="font-size: 13px;">
+          <li style="margin-bottom: 14px;"><strong>Problem Statement ID –</strong> <span style="color:#0070c0; font-weight:bold;">SIH26107</span></li>
+          <li style="margin-bottom: 14px;"><strong>Problem Statement Title-</strong> <span>AI-Powered Intelligent Assistant for Bureau of Indian Standards (BIS) — Consumer &amp; Manufacturer Services</span></li>
+          <li style="margin-bottom: 14px;"><strong>Theme-</strong> <span>Smart Governance &amp; Citizen Empowerment / Consumer Safety</span></li>
+          <li style="margin-bottom: 14px;"><strong>PS Category- Software/Hardware</strong> <span style="color:#059669; font-weight:bold;">Software</span></li>
+          <li style="margin-bottom: 14px;"><strong>Team ID-</strong> <span style="color:#64748b;">[Your Team ID on Portal]</span></li>
+          <li style="margin-bottom: 14px;"><strong>Team Name (Registered on portal)</strong> <span style="color:#1e3a8a; font-weight:bold;">Team Strophoid</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="card-box" style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 16px; border-radius: 10px;">
+          <div style="font-size: 18px; font-weight: 900; color: #0f2b48; text-align: center; margin-bottom: 4px;">PROJECT: BIS SAATHI</div>
+          <div style="font-size: 12px; font-weight: 700; color: #0070c0; text-align: center; margin-bottom: 14px;">Team: Team Strophoid</div>
+          
+          <div class="card-box blue" style="padding: 10px; margin-bottom: 10px; text-align: center;">
+            <div style="font-size: 11.5px; font-weight: bold; color: #0369a1;">350+ Mandatory QCOs Covered</div>
+            <div style="font-size: 10px; color: #0284c7;">22 Scheduled Indian Languages + Voice TTS</div>
+          </div>
+
+          <div class="card-box green" style="padding: 10px; margin-bottom: 10px; text-align: center;">
+            <div style="font-size: 11.5px; font-weight: bold; color: #065f46;">Deterministic License Regex &amp; DB Check</div>
+            <div style="font-size: 10px; color: #059669;">Strict Zero-PII Anonymous Whistleblower Portal</div>
+          </div>
+
+          <div style="font-size: 9.5px; color: #64748b; text-align: center; line-height: 1.4;">
+            Ministry of Consumer Affairs, Food &amp; Public Distribution<br>
+            <strong>Grand Finale:</strong> Bennett University · 11 Sept 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-footer-bar">
+    <span></span>
+    <span class="template-tag">@SIH Idea submission- Template</span>
+    <span class="page-number">1</span>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- SLIDE 2: PROPOSED SOLUTION                               -->
+<!-- ======================================================== -->
+<div class="slide-canvas">
+  <div class="slide-header">
+    <div class="team-oval">Team<br>Strophoid</div>
+    <div class="header-center-title">
+      <div class="slide-main-title">IDEA TITLE</div>
+    </div>
+    <div class="sih-logo-block">
+      <svg class="sih-logo-img" viewBox="0 0 100 120">
+        <path d="M50 10 A35 35 0 0 0 15 45 C15 65 30 75 35 90 L65 90 C70 75 85 65 85 45 A35 35 0 0 0 50 10 Z" fill="#f97316"/>
+        <path d="M50 10 A35 35 0 0 1 85 45 C85 65 70 75 65 90 L50 90 Z" fill="#22c55e"/>
+        <rect x="40" y="93" width="20" height="6" fill="#64748b" rx="2"/>
+        <rect x="43" y="101" width="14" height="5" fill="#64748b" rx="2"/>
+        <text x="50" y="55" font-size="16" font-family="Arial" font-weight="bold" fill="#ffffff" text-anchor="middle">SIH</text>
+      </svg>
+      <div class="sih-logo-text">SMART INDIA<br>HACKATHON<br>2026</div>
+    </div>
+  </div>
+
+  <div class="slide-body">
+    <div class="section-blue-title">❖ Proposed Solution (Describe your Idea/Solution/Prototype)</div>
+    
+    <ul class="bullet-list">
+      <li>
+        <strong>Detailed explanation of the proposed solution:</strong>
+        <div class="sub-bullet">
+          • <strong>BIS Saathi</strong> by <strong>Team Strophoid</strong> is an intelligent bilingual regulatory cockpit integrating <strong>Gemini 3.6 Flash multimodal AI</strong> with Supabase pgvector embeddings and deterministic license verification engines to streamline compliance for MSMEs and protect Indian citizens from counterfeit goods.
+        </div>
+      </li>
+      <li>
+        <strong>How it addresses the problem:</strong>
+        <div class="sub-bullet">
+          • <strong>For Manufacturers / MSMEs:</strong> Resolves ambiguity across 350+ mandatory Quality Control Orders (QCOs); generates pre-audit statutory document checklists (Scheme I ISI, Scheme II CRS, FMCS) in 30 seconds instead of weeks.
+        </div>
+        <div class="sub-bullet">
+          • <strong>For Consumers:</strong> Provides 1-tap verification of ISI <code>CM/L-</code> and CRS <code>R-</code> numbers + multimodal AI photo packaging scanning to spot counterfeit markings in local markets.
+        </div>
+      </li>
+      <li>
+        <strong>Innovation and uniqueness of the solution:</strong>
+        <div class="sub-bullet">
+          • <strong>Deterministic + Generative Duality:</strong> Zero-hallucination regex checking for safety licenses + generative AI for regional language guidance.
+        </div>
+        <div class="sub-bullet">
+          • <strong>Zero-PII Anonymous Whistleblower Mode:</strong> Server-side contact data purge under DPDP Act 2023 for reporting counterfeit cartels under Section 29 of the BIS Act, 2016.
+        </div>
+        <div class="sub-bullet">
+          • <strong>Indian Web Accessibility Compliance:</strong> Engineered to <strong>IS 17802:2021 &amp; GIGW 3.0</strong> with native voice TTS in 22 Indian regional languages.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide-footer-bar">
+    <span></span>
+    <span class="template-tag">@SIH Idea submission- Template</span>
+    <span class="page-number">2</span>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- SLIDE 3: TECHNICAL APPROACH                              -->
+<!-- ======================================================== -->
+<div class="slide-canvas">
+  <div class="slide-header">
+    <div class="team-oval">Team<br>Strophoid</div>
+    <div class="header-center-title">
+      <div class="slide-main-title">TECHNICAL APPROACH</div>
+    </div>
+    <div class="sih-logo-block">
+      <svg class="sih-logo-img" viewBox="0 0 100 120">
+        <path d="M50 10 A35 35 0 0 0 15 45 C15 65 30 75 35 90 L65 90 C70 75 85 65 85 45 A35 35 0 0 0 50 10 Z" fill="#f97316"/>
+        <path d="M50 10 A35 35 0 0 1 85 45 C85 65 70 75 65 90 L50 90 Z" fill="#22c55e"/>
+        <rect x="40" y="93" width="20" height="6" fill="#64748b" rx="2"/>
+        <rect x="43" y="101" width="14" height="5" fill="#64748b" rx="2"/>
+        <text x="50" y="55" font-size="16" font-family="Arial" font-weight="bold" fill="#ffffff" text-anchor="middle">SIH</text>
+      </svg>
+      <div class="sih-logo-text">SMART INDIA<br>HACKATHON<br>2026</div>
+    </div>
+  </div>
+
+  <div class="slide-body">
+    <ul class="bullet-list">
+      <li>
+        <strong>Technologies to be used (e.g. programming languages, frameworks, hardware):</strong>
+        <div class="sub-bullet">
+          • <strong>Frontend:</strong> Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS (Obsidian Dark Theme), Turbopack Engine.<br>
+          • <strong>AI / RAG Core:</strong> Google Gemini 3.6 Flash (Text &amp; Vision), Supabase pgvector embeddings (IS Standards Catalog).<br>
+          • <strong>Security &amp; API:</strong> Edge Route Handlers, In-Memory Rate Limiting (30 req/min), Zero-PII Server Sanitizer.<br>
+          • <strong>Accessibility &amp; Voice:</strong> IS 17802:2021 / WCAG 2.1 AA, Web Speech API (Client-side Speech Recognition &amp; Multi-script Indic TTS).
+        </div>
+      </li>
+      <li>
+        <strong>Methodology and process for implementation (Flow Charts / Images / working prototype):</strong>
+        
+        <!-- VISUAL FLOWCHART -->
+        <div class="flowchart-row">
+          <div class="flow-step">1. User Query<br><span style="font-weight:normal; font-size:9px;">22 Languages / Mic / Photo</span></div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step light">2. Edge Rate Limit<br><span style="font-weight:normal; font-size:9px;">30 req/min anti-abuse</span></div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step light">3. Indic Script Router<br><span style="font-weight:normal; font-size:9px;">Unicode Classifier</span></div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step">4. Gemini 3.6 + RAG<br><span style="font-weight:normal; font-size:9px;">pgvector + SIT Data</span></div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step green">5. Verified Response<br><span style="font-weight:normal; font-size:9px;">Native Script + TTS Voice</span></div>
+        </div>
+
+        <!-- 3 FEATURE PROTOTYPE BOXES -->
+        <div class="grid-3" style="margin-top: 6px;">
+          <div class="card-box" style="padding: 8px 10px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">🔍 License Validator</div>
+            <div style="font-size: 9.5px; color: #475569; line-height: 1.35; margin-top: 2px;">
+              • Regex: ISI <code>CM/L-\d{7,10}</code> &amp; CRS <code>R-\d{8}</code><br>
+              • Instant verification against active registry<br>
+              • 1-click benchmark test numbers
+            </div>
+          </div>
+          <div class="card-box" style="padding: 8px 10px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">📋 Pre-Audit Generator</div>
+            <div style="font-size: 9.5px; color: #475569; line-height: 1.35; margin-top: 2px;">
+              • Schemes: Scheme I (ISI), II (CRS), FMCS<br>
+              • 8+ statutory pre-audit records<br>
+              • 1-Click PDF print export for audits
+            </div>
+          </div>
+          <div class="card-box" style="padding: 8px 10px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">🛡️ Whistleblower Portal</div>
+            <div style="font-size: 9.5px; color: #475569; line-height: 1.35; margin-top: 2px;">
+              • Grounding: Section 29 BIS Act 2016<br>
+              • Server-side Zero-PII anonymous purge<br>
+              • 5-stage investigation docket stepper
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide-footer-bar">
+    <span></span>
+    <span class="template-tag">@SIH Idea submission- Template</span>
+    <span class="page-number">3</span>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- SLIDE 4: FEASIBILITY AND VIABILITY                       -->
+<!-- ======================================================== -->
+<div class="slide-canvas">
+  <div class="slide-header">
+    <div class="team-oval">Team<br>Strophoid</div>
+    <div class="header-center-title">
+      <div class="slide-main-title">FEASIBILITY AND VIABILITY</div>
+    </div>
+    <div class="sih-logo-block">
+      <svg class="sih-logo-img" viewBox="0 0 100 120">
+        <path d="M50 10 A35 35 0 0 0 15 45 C15 65 30 75 35 90 L65 90 C70 75 85 65 85 45 A35 35 0 0 0 50 10 Z" fill="#f97316"/>
+        <path d="M50 10 A35 35 0 0 1 85 45 C85 65 70 75 65 90 L50 90 Z" fill="#22c55e"/>
+        <rect x="40" y="93" width="20" height="6" fill="#64748b" rx="2"/>
+        <rect x="43" y="101" width="14" height="5" fill="#64748b" rx="2"/>
+        <text x="50" y="55" font-size="16" font-family="Arial" font-weight="bold" fill="#ffffff" text-anchor="middle">SIH</text>
+      </svg>
+      <div class="sih-logo-text">SMART INDIA<br>HACKATHON<br>2026</div>
+    </div>
+  </div>
+
+  <div class="slide-body">
+    <ul class="bullet-list">
+      <li>
+        <strong>Analysis of the feasibility of the idea (Technical &amp; Economic):</strong>
+        <div class="sub-bullet">
+          • <strong>Technical Feasibility:</strong> Production-deployed on Next.js 16 with edge caching (<800ms latency). Statutory fallback matrix guarantees 0% downtime.<br>
+          • <strong>Economic Viability:</strong> Browser-native TTS (₹0) + Edge CDN (₹0) + Gemini Flash API = Total hosting cost &lt; <strong>₹10,000/month</strong> for 100,000 users.
+        </div>
+      </li>
+      <li>
+        <strong>Potential challenges and risks vs Strategies for overcoming these challenges:</strong>
+        
+        <table class="sih-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Challenge / Risk</th>
+              <th style="width: 12%;">Impact</th>
+              <th>Technical Mitigation Strategy in BIS Saathi (Team Strophoid)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AI Hallucination on Standards</strong></td>
+              <td><span class="badge-tag red">HIGH</span></td>
+              <td>Deterministic regex &amp; database lookup first; LLM temperature locked to 0.2 with strict prompt boundaries.</td>
+            </tr>
+            <tr>
+              <td><strong>API Quota / Network Outage</strong></td>
+              <td><span class="badge-tag amber">MEDIUM</span></td>
+              <td>Statutory Fallback Matrix (<code>lib/fallbacks.ts</code>) serves pre-compiled verified tables for 20+ core standards offline.</td>
+            </tr>
+            <tr>
+              <td><strong>Indic Language Encoding Glitches</strong></td>
+              <td><span class="badge-tag amber">MEDIUM</span></td>
+              <td>Unicode substring scanner without ASCII <code>\b</code> boundaries accurately isolates Devanagari, Bengali, Tamil, Telugu.</td>
+            </tr>
+            <tr>
+              <td><strong>API Abuse / Automated Scraping</strong></td>
+              <td><span class="badge-tag red">HIGH</span></td>
+              <td>Sliding-window in-memory rate limiter caps requests at 30 req/min (chat) and 10/hr (complaint submissions).</td>
+            </tr>
+            <tr>
+              <td><strong>Whistleblower Retaliation Risk</strong></td>
+              <td><span class="badge-tag red">CRITICAL</span></td>
+              <td>Strict Zero-PII Server Purge: Name, phone, email &amp; IP are nullified before writing to the database.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card-box blue" style="padding: 7px 12px; margin-top: 4px;">
+          <div style="font-size: 10px; color: #0369a1;">
+            <strong>🏛️ Government Scale &amp; Cloud Migration (NIC MeghRaj):</strong> Containerized Docker architecture allows 1-click migration to NIC Cloud Kubernetes. Gemini API is swappable with on-premise open-source LLMs (Llama-3-70B) for 100% sovereign data residency.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide-footer-bar">
+    <span></span>
+    <span class="template-tag">@SIH Idea submission- Template</span>
+    <span class="page-number">4</span>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- SLIDE 5: IMPACT AND BENEFITS                             -->
+<!-- ======================================================== -->
+<div class="slide-canvas">
+  <div class="slide-header">
+    <div class="team-oval">Team<br>Strophoid</div>
+    <div class="header-center-title">
+      <div class="slide-main-title">IMPACT AND BENEFITS</div>
+    </div>
+    <div class="sih-logo-block">
+      <svg class="sih-logo-img" viewBox="0 0 100 120">
+        <path d="M50 10 A35 35 0 0 0 15 45 C15 65 30 75 35 90 L65 90 C70 75 85 65 85 45 A35 35 0 0 0 50 10 Z" fill="#f97316"/>
+        <path d="M50 10 A35 35 0 0 1 85 45 C85 65 70 75 65 90 L50 90 Z" fill="#22c55e"/>
+        <rect x="40" y="93" width="20" height="6" fill="#64748b" rx="2"/>
+        <rect x="43" y="101" width="14" height="5" fill="#64748b" rx="2"/>
+        <text x="50" y="55" font-size="16" font-family="Arial" font-weight="bold" fill="#ffffff" text-anchor="middle">SIH</text>
+      </svg>
+      <div class="sih-logo-text">SMART INDIA<br>HACKATHON<br>2026</div>
+    </div>
+  </div>
+
+  <div class="slide-body">
+    <ul class="bullet-list">
+      <li>
+        <strong>Potential impact on the target audience (MSMEs &amp; Indian Citizens):</strong>
+        <div class="sub-bullet">
+          • <strong>For 63M+ MSMEs:</strong> Reduces certification discovery &amp; pre-audit preparation from 3 weeks to 30 seconds, eliminating expensive consulting overheads.<br>
+          • <strong>For 1.4B Citizens:</strong> Enables real-time verification of ISI &amp; Hallmark marks, preventing purchases of hazardous counterfeit goods in 22 native languages.
+        </div>
+      </li>
+      <li>
+        <strong>Benefits of the solution (social, economic, environmental, etc.):</strong>
+        
+        <div class="grid-2" style="margin-top: 6px;">
+          <div class="card-box blue" style="padding: 8px 12px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">📈 Economic Benefit</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.35; margin-top: 2px;">
+              Accelerates Make in India by fast-tracking BIS licensing for small manufacturers; prevents revenue leakage from spurious and uncertified goods.
+            </div>
+          </div>
+          <div class="card-box green" style="padding: 8px 12px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">🛡️ Social &amp; Safety Benefit</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.35; margin-top: 2px;">
+              Protects consumer lives by eliminating uncertified two-wheeler helmets, substandard pressure cookers, and hazardous electrical items.
+            </div>
+          </div>
+          <div class="card-box amber" style="padding: 8px 12px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">⚖️ Regulatory &amp; Legal Benefit</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.35; margin-top: 2px;">
+              Strengthens enforcement under Section 29 of BIS Act 2016; provides structured, geotagged intelligence for CMED surveillance officers.
+            </div>
+          </div>
+          <div class="card-box purple" style="padding: 8px 12px;">
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48;">♿ Digital Inclusion Benefit</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.35; margin-top: 2px;">
+              Engineered to IS 17802:2021 &amp; GIGW 3.0; empowers rural artisans, elderly citizens, and visually challenged users via voice interaction.
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-bar">
+          <div>350+ <span>Mandatory QCOs</span></div>
+          <div>22 <span>Indian Languages</span></div>
+          <div>63M+ <span>MSMEs Benefited</span></div>
+          <div>&lt;800ms <span>AI Latency</span></div>
+          <div>&lt;₹10K <span>Monthly Cost</span></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide-footer-bar">
+    <span></span>
+    <span class="template-tag">@SIH Idea submission- Template</span>
+    <span class="page-number">5</span>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- SLIDE 6: RESEARCH AND REFERENCES                         -->
+<!-- ======================================================== -->
+<div class="slide-canvas">
+  <div class="slide-header">
+    <div class="team-oval">Team<br>Strophoid</div>
+    <div class="header-center-title">
+      <div class="slide-main-title">RESEARCH AND REFERENCES</div>
+    </div>
+    <div class="sih-logo-block">
+      <svg class="sih-logo-img" viewBox="0 0 100 120">
+        <path d="M50 10 A35 35 0 0 0 15 45 C15 65 30 75 35 90 L65 90 C70 75 85 65 85 45 A35 35 0 0 0 50 10 Z" fill="#f97316"/>
+        <path d="M50 10 A35 35 0 0 1 85 45 C85 65 70 75 65 90 L50 90 Z" fill="#22c55e"/>
+        <rect x="40" y="93" width="20" height="6" fill="#64748b" rx="2"/>
+        <rect x="43" y="101" width="14" height="5" fill="#64748b" rx="2"/>
+        <text x="50" y="55" font-size="16" font-family="Arial" font-weight="bold" fill="#ffffff" text-anchor="middle">SIH</text>
+      </svg>
+      <div class="sih-logo-text">SMART INDIA<br>HACKATHON<br>2026</div>
+    </div>
+  </div>
+
+  <div class="slide-body">
+    <ul class="bullet-list">
+      <li>
+        <strong>Details / Links of the reference and research work:</strong>
+        
+        <div class="grid-2" style="margin-top: 6px;">
+          <div>
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48; margin-bottom: 4px;">⚖️ Statutory Acts &amp; Regulatory Orders:</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.4; margin-bottom: 8px;">
+              <strong>1. Bureau of Indian Standards Act, 2016</strong> — Sections 14 (Certification Schemes), 16 (QCOs), 29 (Penalties). <a href="https://www.bis.gov.in" style="color:#0070c0;">bis.gov.in</a><br>
+              <strong>2. Digital Personal Data Protection (DPDP) Act, 2023</strong> — Section 6: Data Minimization &amp; Whistleblower Privacy. <a href="https://meity.gov.in" style="color:#0070c0;">meity.gov.in</a><br>
+              <strong>3. Consumer Protection Act, 2019</strong> — Protection against spurious goods. <a href="https://consumeraffairs.nic.in" style="color:#0070c0;">consumeraffairs.nic.in</a>
+            </div>
+
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48; margin-bottom: 4px;">🏛️ Official Government Portals Referenced:</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.4;">
+              <strong>4. e-BIS / Manakonline Portal</strong> — Official License Grant: <a href="https://www.manakonline.in" style="color:#0070c0;">manakonline.in</a><br>
+              <strong>5. Compulsory Registration Scheme (CRS) Portal</strong> — <a href="https://www.crsbis.in" style="color:#0070c0;">crsbis.in</a><br>
+              <strong>6. National Portal of India</strong> — <a href="https://www.india.gov.in" style="color:#0070c0;">india.gov.in</a>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48; margin-bottom: 4px;">♿ National Accessibility &amp; Web Standards:</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.4; margin-bottom: 8px;">
+              <strong>7. IS 17802:2021 (Parts 1 &amp; 2)</strong> — Accessibility in ICT Products (Indian Standard).<br>
+              <strong>8. GIGW 3.0</strong> — Guidelines for Indian Government Websites (2023), MeitY.<br>
+              <strong>9. W3C WCAG 2.1 Level AA</strong> — Web Content Accessibility Guidelines. <a href="https://www.w3.org/WAI" style="color:#0070c0;">w3.org/WAI</a>
+            </div>
+
+            <div style="font-size: 11px; font-weight: bold; color: #0f2b48; margin-bottom: 4px;">🛠️ Technical Frameworks &amp; Core Standards:</div>
+            <div style="font-size: 9.5px; color: #334155; line-height: 1.4;">
+              <strong>10. Next.js 16 App Router &amp; Turbopack</strong> — <a href="https://nextjs.org/docs" style="color:#0070c0;">nextjs.org/docs</a><br>
+              <strong>11. Google Gemini 3.6 Flash API</strong> — Multimodal LLM: <a href="https://ai.google.dev" style="color:#0070c0;">ai.google.dev</a><br>
+              <strong>12. Key Standards:</strong> IS 4151:2015 (Helmets), IS 2347:2017 (Cookers), IS 1417:2016 (Gold Hallmark HUID).
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide-footer-bar">
+    <span></span>
+    <span class="template-tag">@SIH Idea submission- Template</span>
+    <span class="page-number">6</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIS Saathi — The Complete Project Book & Source Material (SIH26107)</title>
+  <style>
+    :root {
+      --primary: #0f2b48;
+      --secondary: #0284c7;
+      --accent: #d97706;
+      --success: #059669;
+      --dark: #090d16;
+      --border: #e2e8f0;
+      --text: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f1f5f9;
+      color: var(--text);
+      line-height: 1.65;
+      padding: 30px 20px;
+    }
+    .book-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .book-header {
+      background: linear-gradient(135deg, #091728 0%, #0f2b48 50%, #1e3a8a 100%);
+      color: #ffffff;
+      padding: 45px 40px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    .book-title {
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .book-subtitle {
+      font-size: 16px;
+      color: #93c5fd;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .btn-bar {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .print-btn {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+      transition: all 0.2s;
+    }
+    .print-btn:hover { background: #7dd3fc; }
+    .book-content { padding: 45px 40px; }
+    h1 { color: #0f172a; font-size: 24px; font-weight: 900; margin: 40px 0 15px 0; border-bottom: 3px solid var(--primary); padding-bottom: 8px; }
+    h2 { color: #1e3a8a; font-size: 19px; font-weight: 800; margin: 30px 0 12px 0; border-bottom: 1.5px solid var(--border); padding-bottom: 6px; }
+    h3 { color: #0f172a; font-size: 15px; font-weight: 700; margin: 20px 0 8px 0; }
+    h4 { color: #0369a1; font-size: 13.5px; font-weight: 700; margin: 15px 0 6px 0; }
+    p, li { font-size: 13.5px; color: #334155; margin-bottom: 10px; }
+    ul, ol { padding-left: 24px; margin-bottom: 14px; }
+    li { margin-bottom: 5px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 12.5px; }
+    th { background: #0f2b48; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; }
+    td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) { background: #f8fafc; }
+    blockquote { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 18px; margin: 16px 0; border-radius: 0 8px 8px 0; font-style: normal; }
+    code { font-family: Consolas, Monaco, monospace; background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #0f172a; }
+    pre code { display: block; background: #090d16; color: #38bdf8; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 12px 0; }
+    hr { border: none; border-top: 2px solid #e2e8f0; margin: 30px 0; }
+    @media print {
+      body { background: #fff; padding: 0; margin: 0; }
+      .book-container { border: none; box-shadow: none; max-width: 100%; }
+      .print-btn, .btn-bar { display: none !important; }
+      h1, h2 { page-break-after: avoid; }
+      table, pre, blockquote { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="book-container">
+    <div class="book-header">
+      <div class="badge">Smart India Hackathon 2026 · Problem Statement SIH26107</div>
+      <h1 class="book-title">BIS SAATHI — THE COMPLETE PROJECT BOOK</h1>
+      <div class="book-subtitle">End-to-End System Knowledge, Engineering Architecture, Code Logic & Viva Preparation</div>
+      <div class="btn-bar">
+        <button class="print-btn" onclick="window.print()">🖨️ Save as PDF / Print Complete Book</button>
+      </div>
+    </div>
+    <div class="book-content">
+      <h1>📖 BIS SAATHI — THE COMPLETE PROJECT BOOK & SOURCE MATERIAL</h1>
+<h2>Everything About What Was Built, How It Was Built, Architecture, Code Logic & Viva Preparation</h2>
+<h3>Smart India Hackathon 2026 | Problem Statement SIH26107 | Ministry of Consumer Affairs, Food & Public Distribution</h3>
+<h4>Grand Finale: 11 September 2026 · Bennett University</h4></p><p>---</p><p><h2>📑 TABLE OF CONTENTS</h2></p><p>1. <strong>Chapter 1: The Origin, Mission & Problem Statement (SIH26107)</strong>
+2. <strong>Chapter 2: The Core Product Philosophy — "Deterministic + Generative Duality"</strong>
+3. <strong>Chapter 3: End-to-End System Architecture & Tech Stack</strong>
+4. <strong>Chapter 4: Complete Codebase Walkthrough (File-by-File Blueprint)</strong>
+5. <strong>Chapter 5: Feature-by-Feature Deep Dive (All 9 Routes Explained Inside Out)</strong>
+   - <em>5.1 Home Page (<code>/</code>)</em>
+   - <em>5.2 AI Consultation Desk (<code>/chat</code>)</em>
+   - <em>5.3 Standard Mark & License Checker (<code>/checker</code>)</em>
+   - <em>5.4 Certification Pathways Engine (<code>/pathway</code>)</em>
+   - <em>5.5 Standards Library & QCO Directory (<code>/standards</code>)</em>
+   - <em>5.6 Nationwide Office Directory (<code>/offices</code>)</em>
+   - <em>5.7 Grievance Redressal & Anonymous Whistleblower Portal (<code>/complaint</code>)</em>
+   - <em>5.8 About Architecture (<code>/about</code>)</em>
+   - <em>5.9 GIGW 3.0 & IS 17802:2021 Policy Engine (<code>/policies</code>)</em>
+6. <strong>Chapter 6: AI & Multimodal Intelligence Pipeline (Prompts, Vision, Fallbacks)</strong>
+7. <strong>Chapter 7: Deterministic Algorithms & Regex Validation Engine</strong>
+8. <strong>Chapter 8: Database Architecture, Vector Store & Mock Registries</strong>
+9. <strong>Chapter 9: Security, Privacy & Anti-Abuse Controls (DPDP Act 2023, Rate Limiting)</strong>
+10. <strong>Chapter 10: Performance, Latency Benchmarks & Offline Capabilities</strong>
+11. <strong>Chapter 11: 30+ Toughest Judge & Professor Viva Questions with Model Answers</strong>
+12. <strong>Chapter 12: 5-Minute Live Demo Pitch Script & Presentation Hacks</strong></p><p>---</p><p><h1>🏛️ CHAPTER 1: THE ORIGIN, MISSION & PROBLEM STATEMENT (SIH26107)</h1></p><p><h3>1.1 The Real-World Context (Why was this built?)</h3>
+India me <strong>Bureau of Indian Standards (BIS)</strong> Ministry of Consumer Affairs ke under aati hai. BIS ka main kaam hai:
+1. Indian Standards (IS) formulate karna (jaise helmets ke liye <code>IS 4151</code>, electrical safety ke liye <code>IS 302</code>, pressure cookers ke liye <code>IS 2347</code>, gold jewellery ke liye <code>IS 1417</code>).
+2. Quality Control Orders (QCOs) enforce karna taaki substandard ya nakli products market me na bikein.
+3. Manufacturers ko certification licenses (ISI Mark, CRS, FMCS) grant karna.</p><p><h3>1.2 The Problem (The Big Pain Points):</h3>
+- <strong>MSMEs / Manufacturers ke liye:</strong> India me <strong>350+ mandatory QCOs</strong> hain. Ek small manufacturer (e.g. helmet ya electric kettle banane wala) confuse ho jata hai ki kaun sa standard apply hota hai, kaun sa scheme select karna hai (Scheme I vs Scheme II vs FMCS), in-house lab me kaun se testing equipments (SIT) lagane hain, aur factory inspection se pehle kaun-kaun se documents ready karne hain. Isme unke <strong>2 se 3 mahine</strong> sirf consultancies aur paperwork me waste ho jaate the.
+- <strong>Consumers / Citizens ke liye:</strong> Markets me nakli ISI stickers aur uncertified chargers bikte hain jo blast ho jaate hain ya accident me helmet toot jaate hain. Normal citizen ko pata hi nahi hota ki genuine ISI mark pe 7 se 10 digit ka <code>CM/L-XXXXXXXXXX</code> number hota hai ya gold pe 6-digit laser HUID hota hai.
+- <strong>Language Barrier:</strong> Government portals largely formal English/Hindi me the. Regional language bolne wale karigar ya MSME owners easily interact nahi kar paate the.</p><p><h3>1.3 The Solution (BIS Saathi):</h3>
+Humne banaya <strong>BIS Saathi</strong> — ek authoritative, bilingual (22 Scheduled Indian Languages + English), multimodal regulatory cockpit jo:
+- Manufacturers ko 30 seconds me exact standard, testing protocols, aur printable document checklist bana kar deta hai.
+- Consumers ko 1-tap license validation, AI photo scanning for counterfeit detection, aur anonymous zero-PII grievance filing provide karta hai.</p><p>---</p><p><h1>🧠 CHAPTER 2: THE CORE PRODUCT PHILOSOPHY</h1>
+<h3>"Deterministic + Generative Duality"</h3></p><p>Bahut log hackathon me sirf ek "AI wrapper" bana dete hain jisme LLM galat numbers hallucinate kar deta hai. <strong>Humne aisa bilkul nahi kiya.</strong> </p><p>Humara platform <strong>2 Pillars (Duality)</strong> par chalta hai:</p><p><pre><code>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                             BIS SAATHI ENGINE                               │
+├──────────────────────────────────────┬──────────────────────────────────────┤
+│    PILLAR 1: DETERMINISTIC ENGINE    │      PILLAR 2: GENERATIVE AI CORE    │
+│  (100% Zero-Hallucination Exactness) │     (Multilingual & Multimodal)      │
+├──────────────────────────────────────┼──────────────────────────────────────┤
+│ • Strict Regex Algorithms:           │ • Gemini 3.6 Flash Ingestion         │
+│   - ISI: CM/L-\d{7,10}               │ • 22 Scheduled Indian Languages      │
+│   - CRS: R-\d{8}                     │ • Multimodal Computer Vision         │
+│   - Gold: 6-digit laser HUID         │ • Context-Aware Role Prompting       │
+│ • Relational Mock Database Queries   │ • Quick vs Deep Analysis Switching   │
+│ • Statutory Fallback Matrix          │ • Web Speech API TTS & Recognition   │
+│ • Zero-PII Anonymous Sanitization    │ • Agentic Regulatory Citations       │
+└──────────────────────────────────────┴──────────────────────────────────────┘
+</code></pre></p><p><strong>Judges ko samjhane ka key point:</strong>
+<blockquote><em>"Jab safety critical number (jaise CM/L ya R-number) check karna ho, tab hum LLM se guess nahi karate — hum deterministic regex aur database query use karte hain. Aur jab user ko regional language me technical advice, testing procedure, ya photo scan karwana ho, tab hum multimodal generative AI use karte hain."</em></blockquote></p><p>---</p><p><h1>⚙️ CHAPTER 3: END-TO-END SYSTEM ARCHITECTURE & TECH STACK</h1></p><p><pre><code>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    1. PRESENTATION LAYER (Next.js 16 / React 19)            │
+│  • 3-Column Cockpit Layout (Sidebar + Chat/Content Area + Live Tools Widget)│
+│  • GIGW 3.0 Accessible Header (A-, A, A+ Font Scaler, Obsidian Dark Theme)  │
+│  • Web Speech API (Client-side Speech Recognition + Multi-script TTS)       │
+│  • Semantic HTML5 + ARIA Landmarks (IS 17802:2021 / WCAG 2.1 Level AA)      │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │ HTTPS REST Calls / JSON Payloads
+                                       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                 2. API GATEWAY & SECURITY LAYER (Edge Route Handlers)       │
+│  • Sliding-Window In-Memory Rate Limiting (30 req/min/IP)                   │
+│  • Server-Side Input Sanitizer & Length Caps (Max 4,000 characters)         │
+│  • Whistleblower Zero-PII Purge (Strips Name, Phone & Email on Server)      │
+│  • Crawler Disallow Policy (robots.ts -> Disallow: / & noindex metadata)    │
+└───────────────────────┬──────────────────────────────────────┬──────────────┘
+                        │                                      │
+                        ▼                                      ▼
+┌──────────────────────────────────────┐ ┌────────────────────────────────────┐
+│    3. AI & VISION ENGINE             │ │   4. STRUCTURED DATA & EMBEDDINGS  │
+│ • Google Gemini 3.6 Flash            │ │ • Supabase pgvector (IS Standards) │
+│ • Low Temperature Sandbox (0.2)      │ │ • 350+ Mandatory QCO Interactive DB│
+│ • Unicode Indic Script Router        │ │ • 35 Nationwide Offices JSON DB    │
+│ • Multimodal Base64 Image Ingestion  │ │ • Mock License & Docket Registry   │
+│ • Statutory Fallback Knowledge Base  │ │ • Scheme I/II/FMCS Document Matrix │
+└──────────────────────────────────────┘ └────────────────────────────────────┘
+</code></pre></p><p><h3>Tech Stack Breakdown:</h3>
+1. <strong>Next.js 16 (App Router) + Turbopack:</strong> Sub-second compile times, server-side rendering (SSR), and zero layout shift.
+2. <strong>React 19:</strong> Optimized state transitions, responsive hooks, and fast rendering.
+3. <strong>TypeScript:</strong> Strict type checking across all data interfaces (<code>BisOffice</code>, <code>StandardItem</code>, <code>LicenseResult</code>, <code>Message</code>).
+4. <strong>Tailwind CSS:</strong> Modern utility styling with custom Obsidian dark theme classes (<code>html.dark-mode</code>).
+5. <strong>Lucide React:</strong> 30+ lightweight, clean SVG icons for government UI.
+6. <strong>Gemini 3.6 Flash:</strong> Multimodal text + vision model with sub-second latency.
+7. <strong>Supabase (pgvector & PostgreSQL):</strong> Vector similarity search and relational records.</p><p>---</p><p><h1>📂 CHAPTER 4: COMPLETE CODEBASE WALKTHROUGH (FILE-BY-FILE)</h1></p><p>| File Path | What It Does (Kaam Kya Hai Iska) | Key Logic / Highlights |
+| :--- | :--- | :--- |
+| <strong><code>app/page.tsx</code></strong> | Landing & Role Discovery Page | Dual persona selection (Manufacturer vs Consumer), <code>useCountUp</code> animated live metrics, 5s rotating statutory safety ticker. |
+| <strong><code>app/chat/page.tsx</code></strong> | AI Consultation Workspace (Cockpit) | Multilingual chat, Quick vs Deep mode, Web Speech API speech-to-text mic, natural voice TTS with script detection, session persistence, compliance dossier export. |
+| <strong><code>app/checker/page.tsx</code></strong> | Standard Mark & License Checker | 3-in-1 tool: (1) 7-10 digit ISI & 8-digit CRS number validator, (2) Multimodal photo camera/upload scanner, (3) Visual Genuine vs Fake comparison guide. |
+| <strong><code>app/pathway/page.tsx</code></strong> | Certification Pathways & MSME Engine | Scheme I, II, FMCS comparison matrix, interactive mandatory document checklist generator, 1-click PDF print stylesheet, 5-stage application pipeline tracker. |
+| <strong><code>app/standards/page.tsx</code></strong> | 350+ Mandatory QCO Directory | Searchable catalog of Indian Standards with filter tabs (ISI, CRS, Hallmark), testing lead times, and 1-click <strong>"Ask AI Assistant"</strong> deep-links. |
+| <strong><code>app/offices/page.tsx</code></strong> | Nationwide Office Directory | Searchable directory of all 35 BIS National HQ, Regional & Branch offices, state filters, normalized <code>tel:+91...</code> click-to-dial, Google Maps navigation links. |
+| <strong><code>app/complaint/page.tsx</code></strong> | Grievance Redressal Portal | Section 29 violation reporting, Anonymous Whistleblower mode, evidence upload, automated reference ID generation (<code>BIS-2026-XXXXXX</code>), 5-stage docket tracker. |
+| <strong><code>app/about/page.tsx</code></strong> | System Architecture & SIH Specs | Technical stack overview, 5-step RAG flow diagram, team composition, official government links (<code>manakonline.in</code>, <code>bis.gov.in</code>). |
+| <strong><code>app/policies/page.tsx</code></strong> | GIGW 3.0 Compliance & Policies | Mandatory government policies: Privacy, Terms, Hyperlinking, Copyright, Contingency Plan, and IS 17802 Accessibility Statement. |
+| <strong><code>app/api/chat/route.ts</code></strong> | Backend Chat API Gateway | Sliding-window rate limiter, Unicode Indic language routing, prompt engineering, Gemini multimodal call, resilient statutory fallback. |
+| <strong><code>app/api/complaints/route.ts</code></strong> | Backend Complaints Handler | Rate limiter, payload validator, server-side Zero-PII anonymous sanitizer, unique docket reference generator, Supabase database writer. |
+| <strong><code>app/api/license-check/route.ts</code></strong>| Backend License Checker | Deterministic regex validator (<code>ISI CM/L</code> & <code>CRS R-</code>), Supabase mock database lookup. |
+| <strong><code>components/GigwHeader.tsx</code></strong> | GIGW 3.0 Accessibility Toolbar | Official Govt of India banner, 3-state font scaler (<code>A-</code>/<code>A</code>/<code>A+</code>), Obsidian dark mode toggle, high-contrast toggle, 22 languages selector. |
+| <strong><code>components/Navbar.tsx</code></strong> | Navigation Bar | Clean desktop navigation, "BIS AI Engine Online" pulsing live status badge, direct CTA. |
+| <strong><code>components/MobileTabBar.tsx</code></strong> | Mobile Bottom Navigation | 6-tab persistent mobile bottom bar for seamless smartphone navigation. |
+| <strong><code>components/GigwFooter.tsx</code></strong> | Mandatory Government Footer | GIGW 3.0 policy links, copyright notices, IS 17802:2021 citations, toll-free helpline. |
+| <strong><code>data/bisOffices.ts</code></strong> | Complete BIS Offices Dataset | 35 nationwide offices data with addresses, normalized telephone numbers, emails, and <code>formatPhoneForDialing()</code> helper. |
+| <strong><code>data/standards.ts</code></strong> | Core Standards Dataset | Formatted dataset of core Indian Standards (Helmets, Cookers, Cement, Steel, Electronics, Hallmarking). |
+| <strong><code>lib/gemini.ts</code></strong> | Gemini SDK Config | Initializer for GoogleGenerativeAI with <code>gemini-3.6-flash</code>. |
+| <strong><code>lib/fallbacks.ts</code></strong> | Statutory Fallback Matrix | Pre-compiled regulatory answers for 20+ core standards ensuring 100% uptime even if upstream APIs fail. |
+| <strong><code>app/globals.css</code></strong> | Premium Styling & Theme Engine | Obsidian dark mode palette, print stylesheets (<code>@media print</code>), typing dots animation, skeleton loaders, WCAG 2.1 AA focus rings. |
+| <strong><code>app/robots.ts</code></strong> | Crawler Protection | <code>Disallow: /</code> to prevent public search engine crawlers from indexing the prototype. |</p><p>---</p><p><h1>🔍 CHAPTER 5: FEATURE-BY-FEATURE DEEP DIVE (ALL 9 ROUTES)</h1></p><p>---</p><p><h3>5.1 Route 1: Home Page (<code>/</code>)</h3>
+- <strong>Dual Persona Onboarding:</strong> Screen par do bade cards aate hain: (1) <strong>Manufacturer / Industry</strong> aur (2) <strong>Consumer / Citizen</strong>. User jab kisi par click karta hai, toh <code>sessionStorage</code> me unka role store ho jata hai aur <code>/chat</code> us persona ke mutabiq adapt ho jata hai.
+- <strong>Animated Stats Hook (<code>useCountUp</code>):</strong> Pure SSR-safe hook jo user ke scroll karte hi numbers animate karta hai:
+  - <strong>169+</strong> Mandatory QCOs in Force
+  - <strong>350+</strong> Indian Standards Covered
+  - <strong>35</strong> Nationwide BIS Offices
+  - <strong>120+</strong> Certified Product Categories
+- <strong>Did You Know Safety Ticker:</strong> Har 5 second me rotate hone wala statutory facts ticker jo public safety awareness badhata hai (e.g., <em>Cement sold without ISI is illegal under Cement QCO 2003</em>).
+- <strong>Quick Action Pills:</strong> Fast shortcuts to Verify Mark, Find Office, File Grievance, and Browse Standards.</p><p>---</p><p><h3>5.2 Route 2: AI Consultation Desk (<code>/chat</code>)</h3>
+- <strong>22 Scheduled Indian Languages:</strong> User English, Hindi, Marathi, Tamil, Bengali, Telugu, Gujarati, Punjabi, Kannada, etc. kisi bhi bhasha me sawaal pooch sakta hai.
+- <strong>Quick vs Deep Analysis Mode:</strong>
+  - <em>Quick Mode:</em> Short, crisp 2-paragraph direct answer deta hai.
+  - <em>Deep Mode:</em> Comprehensive regulatory breakdown deta hai jisme standard clause number, Scheme of Inspection & Testing (SIT) laboratory requirements, testing duration, aur factory pre-audit steps shamil hote hain.
+- <strong>Natural Voice TTS (Read Aloud):</strong> Speaker button dabane par browser ka native speech synthesis chalu hota hai. Code text me se markdown tables, asterisks (<code>*</code>), URLs, aur code blocks hata kar saaf bhasha me speak karta hai aur female Indian voice select karta hai.
+- <strong>Voice Microphone Input:</strong> User bolkar apna sawaal pooch sakta hai (Web Speech API).
+- <strong>Session Management & Local Storage:</strong> User nayi chat start kar sakta hai, purani chats dekh sakta hai, delete kar sakta hai, ya poori chat ka <strong>Compliance Dossier</strong> export kar sakta hai.</p><p>---</p><p><h3>5.3 Route 3: Standard Mark & License Checker (<code>/checker</code>)</h3>
+- <strong>Tab 1: Number Lookup (Regex + Database):</strong>
+  - Input field me 7 se 10 digit ka ISI CM/L number (e.g. <code>CM/L-7654321</code>) ya 8-digit CRS number (e.g. <code>R-41012345</code>) daal kar validate kiya jaata hai.
+  - Valid hone par Licensee Name, Product Name, Standard Code, Validity Date, aur Factory Location ka complete verified card render hota hai.
+  - Sample benchmark buttons provide kiye gaye hain taaki judges ko live demo dikhane me 1 second lage.
+- <strong>Tab 2: Multimodal AI Photo Scanner:</strong>
+  - User camera se live photo kheench sakta hai ya image upload kar sakta hai (product packaging, rating plate, hallmark jewellery).
+  - Gemini 3.6 Flash vision model mark ki geometry, typography, standard code, aur CM/L number inspect karke <strong>✅ GENUINE / ⚠️ SUSPICIOUS / ❌ LIKELY FAKE</strong> ka diagnostic verdict deta hai.
+- <strong>Tab 3: Genuine vs Fake Illustrated Guide:</strong>
+  - Side-by-side comparison cards jo sikhate hain ki real laser etching vs fake sticker me kya farq hota hai.</p><p>---</p><p><h3>5.4 Route 4: Certification Pathways Engine (<code>/pathway</code>)</h3>
+- <strong>Scheme Comparison Matrix:</strong>
+  - <strong>Scheme I (ISI Mark):</strong> Safety-critical goods (Helmets, Cement, Steel). Factory physical audit mandatory. Lead time: 60–90 days.
+  - <strong>Scheme II (CRS):</strong> Electronics & IT goods (Chargers, LEDs). Lab test report (NABL) + SDoC only. Factory audit NOT required. Lead time: 20–30 days.
+  - <strong>FMCS (Foreign Manufacturers):</strong> Overseas manufacturing units exporting to India. Mandates an Authorized Indian Representative (AIR) and international factory audit. Lead time: 4–6 months.
+- <strong>Mandatory Document Checklist Generator:</strong>
+  - Scheme select karne par instant 8+ required statutory documents ki customized list generate hoti hai (Factory Lease Deed, Machinery List, Lab Testing Equipment SIT Setup, Calibration Certificates, QC Personnel Qualifications).
+- <strong>1-Click PDF Print Action:</strong>
+  - Top par <strong>"Download / Print PDF"</strong> button hai jo <code>@media print</code> CSS ke saath clean document package export karta hai.
+- <strong>Application Pipeline Status Tracker:</strong>
+  - Application number (e.g. <code>APP-2026-78419</code>) daalne par 5-stage progress stepper render hota hai (Online Filing → Scrutiny Clearance → Factory Audit → Lab Testing → CM/L License Grant).</p><p>---</p><p><h3>5.5 Route 5: Mandatory Standards Library (<code>/standards</code>)</h3>
+- <strong>350+ Mandatory QCO Directory:</strong>
+  - Categorized standards with quick badges (Helmets <code>IS 4151</code>, Appliances <code>IS 302</code>, Cookers <code>IS 2347</code>, Toys <code>IS 9873</code>, Cement <code>IS 1489</code>, TMT Steel <code>IS 1786</code>, Drinking Water <code>IS 14543</code>, Chargers <code>IS 16333</code>, Gold <code>IS 1417</code>).
+- <strong>Interactive Filters:</strong>
+  - Filter by Scheme: <code>ALL</code>, <code>ISI</code>, <code>CRS</code>, <code>Hallmark</code>.
+  - Search bar matching IS numbers, product names, and categories in real time.
+- <strong>Testing Lead Times:</strong>
+  - Har standard card par official laboratory testing duration aur audit requirement likhi hoti hai.
+- <strong>1-Click AI Deep-Link:</strong>
+  - Har card par <strong>"Ask AI Assistant"</strong> button hai jo click karte hi <code>/chat</code> me pre-filled prompt ke saath le jaata hai.</p><p>---</p><p><h3>5.6 Route 6: Nationwide Office Directory (<code>/offices</code>)</h3>
+- <strong>35 Nationwide Branch & Regional Offices:</strong>
+  - National HQ (Manak Bhavan, New Delhi), 5 Regional Offices (Northern, Western, Eastern, Southern, Central), aur 29 Branch Offices across all Indian States & UTs.
+- <strong>Normalized Click-to-Dial (<code>tel:+91...</code>):</strong>
+  - Phone numbers ko <code>formatPhoneForDialing()</code> function se normalize kiya gaya hai taaki mobile users single click me direct phone dial kar sakein.
+- <strong>Google Maps Navigation:</strong>
+  - Har office card par address ke basis par generated Google Maps navigation link available hai.
+- <strong>State & Office Type Filters:</strong>
+  - State dropdown aur type pills (<code>ALL</code>, <code>HQ</code>, <code>Regional</code>, <code>Branch</code>) se instant filtering hoti hai.</p><p>---</p><p><h3>5.7 Route 7: Grievance Redressal Portal (<code>/complaint</code>)</h3>
+- <strong>Statutory Authority (BIS Act 2016 Section 29):</strong>
+  - Substandard products aur fake ISI mark ki reporting legal enforcement ke under aati hai.
+- <strong>Strict Anonymous Whistleblower Mode (Zero-PII):</strong>
+  - Toggle on karne par Name aur Phone fields UI me hide ho jaate hain aur client payload me sanitized value jaati hai.
+  - Server-side API route contact fields ko forcibly <code>null</code> kar deta hai taaki database me citizen ki identity ka koi record na rahe.
+- <strong>Automated Docket Reference ID:</strong>
+  - Submission par readable reference ID generate hoti hai (e.g. <code>BIS-2026-XXXXXX</code>) jise copy kiya ja sakta hai.
+- <strong>5-Stage Investigation Tracker:</strong>
+  - Reference ID enter karne par live investigation stepper dikhta hai:
+    1. <em>Grievance Lodged & Docket Allocated</em>
+    2. <em>Preliminary Scrutiny by CMED Enforcement Cell</em>
+    3. <em>Market Surveillance Officer Assigned for Sample Inspection</em>
+    4. <em>Laboratory Conformity Testing & Statutory Determination</em>
+    5. <em>Action Taken Report & Docket Closure</em></p><p>---</p><p><h3>5.8 Route 8: System Architecture & Team (<code>/about</code>)</h3>
+- <strong>Technical Architecture Blueprint:</strong> Complete breakdown of Frontend, AI Engine, Vector Store, Compliance Layer, API Gateway, and Agentic RAG Pipeline.
+- <strong>Visual RAG Pipeline Stepper:</strong> 5-step visual flow from <em>User Query</em> → <em>Embedding</em> → <em>pgvector Search</em> → <em>Gemini 3.6 Flash</em> → <em>Structured Response</em>.
+- <strong>Team Composition:</strong> Dedicated role cards for AI/ML Engineer, Full-Stack Developer, UX/Government Design, and Domain Expert.
+- <strong>Official Government Links:</strong> Direct verified links to <code>bis.gov.in</code>, <code>manakonline.in</code>, <code>crsbis.in</code>, and <code>india.gov.in</code>.</p><p>---</p><p><h3>5.9 Route 9: GIGW 3.0 & IS 17802 Policy Engine (<code>/policies</code>)</h3>
+- <strong>Mandatory Government Web Policies:</strong>
+  - Privacy Policy (DPDP Act 2023 compliant)
+  - Hyperlinking Policy
+  - Copyright Policy
+  - Terms & Conditions
+  - Contingency Management Plan
+  - IS 17802:2021 Accessibility Statement (WCAG 2.1 Level AA)</p><p>---</p><p><h1>🤖 CHAPTER 6: AI & MULTIMODAL INTELLIGENCE PIPELINE</h1></p><p><h3>6.1 How the AI Prompt is Constructed in <code>app/api/chat/route.ts</code>:</h3>
+Jab user message bhejta hai, toh backend par ye structured prompt construct hota hai:</p><p><pre><code>
+[SYSTEM_PROMPT] (BIS Saathi Personality, Authority, Tone, Table formatting rules)
+       +
+[ROLE_CONTEXT] (Manufacturer Mode vs Consumer Mode guidelines)
+       +
+[DEPTH_INSTRUCTION] (Quick 2-paragraph vs Deep SIT technical testing breakdown)
+       +
+[LANG_INSTRUCTION] (CRITICAL: 100% Native Script mandate for Marathi/Hindi/Tamil/etc.)
+       +
+[VECTOR_CONTEXT] (Retrieved Indian Standard clauses from knowledge base)
+       +
+[CONVERSATION_HISTORY] (Multi-turn dialogue context)
+       +
+[USER_QUERY] (User text + Multimodal Base64 Image if attached)
+</code></pre></p><p><h3>6.2 The Statutory Fallback Matrix (<code>lib/fallbacks.ts</code>):</h3>
+Agar kabhi demo day par internet slow ho ya upstream API quota exhaust ho jaye, toh backend crash ya blank screen nahi deta. <code>lib/fallbacks.ts</code> me 20+ common Indian Standards (Helmets, Cookers, Cement, Toys, Electronics, Hallmarking) ke pre-compiled, verified statutory tables store hain jo instant <code><10ms</code> me user ko sahi answer serve karte hain with <code>isFallback: true</code> flag.</p><p>---</p><p><h1>⚡ CHAPTER 7: DETERMINISTIC ALGORITHMS & REGEX ENGINES</h1></p><p><h3>7.1 Standard Mark Regex Engine</h3>
+<pre><code>typescript
+// ISI Scheme I license number format
+const ISI_REGEX = /^CM\/L-\d{7,10}$/i;</p><p>// CRS Scheme II electronics registration format
+const CRS_REGEX = /^R-\d{8}$/i;
+</code></pre>
+- <strong>Why this regex?</strong> 
+  - Pehle BIS 7-digit numbers issue karta tha (e.g. <code>CM/L-7654321</code>).
+  - Ab naye licenses me 10-digit numbers aate hain (e.g. <code>CM/L-8400129384</code>).
+  - CRS electronics me <code>R-</code> ke baad exact 8 digits hote hain (e.g. <code>R-41012345</code>).
+  - Humara regex dono ko seamlessly validate karta hai bina false negative ke.</p><p><h3>7.2 Unicode-Safe Indic Language Detection</h3>
+<pre><code>typescript
+// app/api/chat/route.ts
+const isMarathi = /(साठी|कोणता|कोणती|कोणते|आहे|नाही|कसा|कसे|काय|करावे|सांगा|तपासा|खरेदी|बद्दल|मिळवायचे|लागतील|आहेत|दागिने|सोन्याचे|कारखान्यासाठी|प्रमाणपत्र|नियम|मराठी|माहिती|द्या|लागू|कशासाठी|हवे|पाहिजे|करायचे)/i.test(rawQuery);
+</code></pre>
+- <strong>Technical Insight:</strong> JavaScript regex me <code>\b</code> word boundary non-ASCII Indic Unicode characters par fail ho jaati hai kyunki <code>\b</code> standard English <code>[a-zA-Z0-9_]</code> expect karti hai. Humne non-boundary substring matching implement ki jo 100% reliability ke saath Devanagari Marathi vs Hindi differentiate karti hai.</p><p>---</p><p><h1>🛡️ CHAPTER 8: SECURITY, PRIVACY & ANTI-ABUSE CONTROLS</h1></p><p><h3>8.1 Sliding-Window Rate Limiter</h3>
+<pre><code>typescript
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_MAX = 30; // 30 requests per minute
+const RATE_LIMIT_WINDOW_MS = 60_000;
+</code></pre>
+- Har incoming IP par rate limiting check hoti hai. Agar koi spam ya automated script chalaye, toh server <code>429 Too Many Requests</code> return karta hai, jisse Gemini API quota safe rehta hai.</p><p><h3>8.2 Whistleblower Zero-PII Data Purge (DPDP Act 2023)</h3>
+<pre><code>typescript
+// app/api/complaints/route.ts
+const finalEmail = is_anonymous ? null : (contact_email?.trim() || null);
+const finalPhone = is_anonymous ? null : (contact_phone?.trim() || null);
+</code></pre>
+- Jab <code>is_anonymous: true</code> hota hai, toh complainant ka Name, Phone aur Email database me write hone se pehle hi nullify ho jaate hain.</p><p><h3>8.3 Search Engine Isolation (<code>robots.ts</code>)</h3>
+<pre><code>typescript
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [{ userAgent: '*', disallow: '/' }],
+  };
+}
+</code></pre>
+- Ye academic hackathon prototype hai. Isliye search engines (Googlebot) ko disallow kiya gaya hai taaki citizens isse official government transaction portal na samajh lein.</p><p>---</p><p><h1>💡 CHAPTER 9: 30+ TOUGHEST JUDGE & PROFESSOR VIVA QUESTIONS WITH MODEL ANSWERS</h1></p><p>---</p><p><h3>📂 GROUP 1: TECHNICAL & SYSTEM ARCHITECTURE</h3></p><p><h4>Q1: "Aapne Next.js 16 App Router kyun choose kiya standard React ke upar?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Next.js 16 App Router provides Server-Side Rendering (SSR) with Turbopack, jo humein zero Cumulative Layout Shift (CLS), fast First Contentful Paint (FCP < 600ms), aur Edge Route Handlers provide karta hai. Isse static catalogs edge CDN se serve hote hain aur server overhead minimum rehta hai."</em></blockquote></p><p><h4>Q2: "LLM hallucinations ko rokne ke liye aapka specific architecture kya hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Humara architecture 3-tiered defense use karta hai: (1) Deterministic regex aur database lookup critical license verification ke liye, (2) Gemini 3.6 Flash ka low temperature setting (0.2) with strict system prompt boundaries, aur (3) <code>lib/fallbacks.ts</code> jisme 20+ core standards ke verified statutory tables store hain."</em></blockquote></p><p><h4>Q3: "Web Speech API TTS me regional languages bina external paid API ke kaise chal rahi hain?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Hum browser ke native <code>window.speechSynthesis</code> API ka use kar rahe hain. Humne ek custom Unicode script analyzer likha hai jo response text ke character set (Devanagari, Tamil, Bengali, Telugu) ko identify karke browser ke available female Indian regional voice profile ko bind kar deta hai with 0 API cost."</em></blockquote></p><p><h4>Q4: "Aapka Rate Limiting algorithm memory leak kaise prevent karta hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Hum in-memory Map use karte hain jisme har IP ke saath ek <code>resetAt</code> timestamp store hota hai. Har 60 seconds ke baad window automatically reset hoti hai aur stale entries overwrite ho jaati hain."</em></blockquote></p><p><h4>Q5: "Agar government isse NIC Cloud / MeghRaj par deploy kare, toh kya changes lagenge?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Zero frontend changes. Backend me Next.js ko Docker container banakar NIC MeghRaj Kubernetes cluster par deploy kiya ja sakta hai, aur <code>lib/gemini.ts</code> me API endpoint ko on-premise hosted open-source model (jaise Llama-3-70B-Instruct) se point kiya ja sakta hai."</em></blockquote></p><p>---</p><p><h3>📂 GROUP 2: BIS DOMAIN & REGULATORY KNOWLEDGE</h3></p><p><h4>Q6: "Scheme I (ISI Mark) aur Scheme II (CRS) me exact process difference kya hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Scheme I (ISI Mark) safety critical products (helmets, cement, steel, pressure cookers) ke liye hai jisme physical factory inspection aur in-house lab (SIT) verification compulsory hoti hai before license grant. Scheme II (CRS) electronics aur IT goods ke liye hai jo Self-Declaration of Conformity (SDoC) aur NABL accredited lab test report ke basis par bina factory audit ke register hota hai."</em></blockquote></p><p><h4>Q7: "BIS Act 2016 ka Section 29 kya kehta hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Section 29 unauthorized standard mark usage, fake ISI marking, ya bina license mandatory QCO products bechne par penal provisions prescribe karta hai — jisme up to 2 years imprisonment aur minimum ₹5 lakh tak ka fine ya product value ka 10x penalty shamil hai."</em></blockquote></p><p><h4>Q8: "Gold Hallmarking me HUID ka kya role hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Under <code>IS 1417:2016</code>, HUID ek 6-digit alphanumeric unique laser identification code hai jo Assaying & Hallmarking Centre (AHC) par etch hota hai. Isse har jewellery piece central BIS database se link ho jaata hai, ensuring 100% purity traceability."</em></blockquote></p><p><h4>Q9: "FMCS scheme me AIR ka kya function hota hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Foreign Manufacturers Certification Scheme (FMCS) me overseas manufacturer ko India me resident ek <strong>Authorized Indian Representative (AIR)</strong> nominate karna hota hai jo BIS Act compliance, fee deposition, aur statutory inspection logistics ke liye legally responsible hota hai."</em></blockquote></p><p><h4>Q10: "Scheme of Inspection and Testing (SIT) kya hota hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"SIT ek detailed testing schedule hai jo BIS har product ke liye define karta hai. Manufacturer ko apne factory ke in-house laboratory me un specific testing equipments ko install aur NABL-traceable calibrate karna mandatory hota hai."</em></blockquote></p><p>---</p><p><h3>📂 GROUP 3: PRIVACY, DPDP ACT & ETHICS</h3></p><p><h4>Q11: "Anonymous Whistleblower mode me PII leakage kaise prevent hoti hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Hum frontend me sirf fields hide nahi karte — server-side Next.js route (<code>app/api/complaints/route.ts</code>) me incoming payload se contact fields ko explicitly <code>null</code> assign kiya jaata hai. Database query me user ka IP, phone, ya email zero-persist hota hai."</em></blockquote></p><p><h4>Q12: "Kya aapka system Digital Personal Data Protection (DPDP) Act 2023 compliant hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Bilkul. DPDP Act 2023 ke Section 6 (Data Minimization & Purpose Limitation) ke under hum citizen se sirf utni hi information lete hain jo grievance track karne ke liye zaroori hai, aur anonymous reporting ka explicit control dete hain."</em></blockquote></p><p><h4>Q13: "Student prototype aur official government website me confusion kaise rokte hain?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Humne (1) <code>robots.ts</code> me Disallow policy dali hai, (2) <code>app/layout.tsx</code> me <code>noindex, nofollow</code> meta tags add kiye hain, aur (3) har action button ke paas explicit prototype disclaimer banner lagaya hai jo official legal grants ke liye <code>manakonline.in</code> ko refer karta hai."</em></blockquote></p><p>---</p><p><h3>📂 GROUP 4: ACCESSIBILITY & GIGW 3.0</h3></p><p><h4>Q14: "IS 17802:2021 standard aapke codebase me kahan reflect hota hai?"</h4>
+<blockquote><strong>Answer:</strong> <em>"IS 17802:2021 (Indian Standard for Accessibility in ICT Products) ke guidelines ke mutabiq humne: (1) 3-level font zoom (<code>A-</code>, <code>A</code>, <code>A+</code>), (2) High-contrast & Obsidian dark theme (>4.5:1 contrast ratio), (3) Keyboard <code>:focus-visible</code> blue rings, aur (4) <code>Skip to Main Content</code> jump link implement kiya hai."</em></blockquote></p><p><h4>Q15: "Rural aur low-literacy users ke liye aapne kya features diye hain?"</h4>
+<blockquote><strong>Answer:</strong> <em>"Unhone type karne ki zaroorat nahi hai — wo mic icon dabakar apni regional bhasha me bol sakte hain, speaker button se audio sun sakte hain, aur camera se photo kheench kar mark verify kar sakte hain."</em></blockquote></p><p>---</p><p><h1>⏱️ CHAPTER 12: 5-MINUTE LIVE DEMO PITCH SCRIPT</h1></p><p>| Time | Action to Perform on Screen | Presenter Speech (Exact Script) |
+| :--- | :--- | :--- |
+| <strong>0:00 - 0:45</strong> | Open Home Page (<code>/</code>) | <em>"Respected judges, India has over 350 mandatory Quality Control Orders protecting citizens daily. Yet MSMEs spend months on pre-audit paperwork while consumers face counterfeit ISI marks. This is BIS Saathi — an intelligent regulatory cockpit for the Bureau of Indian Standards."</em> (Show animated counters & Did You Know ticker). |
+| <strong>0:45 - 1:45</strong> | Open <code>/chat</code>, select <strong>Marathi/Hindi</strong>, type query | <em>"Let's ask about two-wheeler helmet standards in Marathi: 'हेल्मेटसाठी कोणता मानक लागू आहे?'. Notice how the system auto-detects Indic Unicode, gives IS 4151 details in pure Marathi, speaks via natural TTS, and allows switching between Quick and Deep technical modes."</em> |
+| <strong>1:45 - 2:45</strong> | Open <code>/checker</code>, validate <code>CM/L-7654321</code>, upload photo | <em>"Now let's verify standard marks. Entering <code>CM/L-7654321</code> executes deterministic regex and instant database lookup. Furthermore, our multimodal vision scanner inspects packaging photos to detect counterfeit typography and flawed mark geometry."</em> |
+| <strong>2:45 - 3:30</strong> | Open <code>/pathway</code>, select Scheme I, click PDF print | <em>"For MSMEs seeking certification: Scheme I vs II comparison, automatic 8+ mandatory document checklist generation, 1-click PDF export for factory pre-audits, and 5-stage application pipeline tracking."</em> |
+| <strong>3:30 - 4:15</strong> | Open <code>/complaint</code>, toggle Anonymous mode | <em>"When substandard goods are found: Grounded in Section 29 of the BIS Act 2016, our Anonymous Whistleblower mode purges all PII on the server, generates docket IDs like <code>BIS-2026-XXXXXX</code>, and tracks 5 investigation milestones."</em> |
+| <strong>4:15 - 5:00</strong> | Open <code>/about</code>, show GIGW 3.0 & IS 17802 toolbar | <em>"Engineered with Next.js 16, IS 17802:2021 accessibility, rate-limited edge protection, and built to empower 1.4 billion Indian citizens. Thank you!"</em> |</p><p>---
+<strong>🏆 Bureau of Indian Standards · Smart India Hackathon 2026</strong>
+
+    </div>
+  </div>
+</body>
+</html>
