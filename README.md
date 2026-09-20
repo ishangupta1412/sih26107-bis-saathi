@@ -123,10 +123,9 @@ npm run dev
 
 ---
 
-## 📂 7. Project Documentation & Presentations
+## 📂 7. Project Presentation
 
-- 📊 **Official Idea Presentation (PPTX):** [`docs/presentation/SIH2026-IDEA-Presentation Team Strophoid.pptx`](docs/presentation/SIH2026-IDEA-Presentation%20Team%20Strophoid.pptx)
-- 📑 **Official Idea Presentation (PDF):** [`docs/presentation/SIH2026-IDEA-Presentation Team Strophoid.pdf`](docs/presentation/SIH2026-IDEA-Presentation%20Team%20Strophoid.pdf)
+- 📊 **Official Presentation (PPTX):** [`docs/presentation/SIH2026-IDEA-Presentation Team Strophoid.pptx`](docs/presentation/SIH2026-IDEA-Presentation%20Team%20Strophoid.pptx)
 
 ---
 *Built with ❤️ by **Team Strophoid** for Smart India Hackathon 2026.*
