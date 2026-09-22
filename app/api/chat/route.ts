@@ -94,10 +94,9 @@ async function callGemini(
   const apiKey = (process.env.GEMINI_API_KEY || FALLBACK_KEY).trim();
 
   const models = [
-    'gemini-2.5-flash',
-    'gemini-2.0-flash',
-    'gemini-1.5-flash',
-    'gemini-1.5-flash-latest',
+    'gemini-3.8-flash',
+    'gemini-3.6-flash',
+    'gemini-3.1-flash-lite',
   ];
 
   const parts: any[] = [];
