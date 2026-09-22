@@ -14,9 +14,11 @@ export async function generateWithGemini(
 ): Promise<string> {
   const apiKey = (process.env.GEMINI_API_KEY || FALLBACK_KEY).trim();
   const modelsToTry = [
-    process.env.GEMINI_MODEL || 'gemini-3.6-flash',
-    'gemini-3.6-flash',
-    'gemini-3.5-flash',
+    process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+    'gemini-2.5-flash',
+    'gemini-2.0-flash',
+    'gemini-1.5-flash',
+    'gemini-1.5-flash-latest',
   ];
 
   // Convert parts to standard Gemini format

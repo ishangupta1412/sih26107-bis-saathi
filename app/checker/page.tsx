@@ -133,7 +133,35 @@ export default function CheckerPage() {
         const data = await res.json();
         setPhotoAnalysis(data.answer || 'Analysis complete.');
       } catch {
-        setPhotoAnalysis('Error analyzing product photo. Please ensure clear lighting and legible text.');
+        setPhotoAnalysis(
+          `### 📸 BIS Mark Inspection — Manual Verification Guide
+
+The AI Vision scanner is temporarily in limited mode. Please verify your product manually using the checklist below:
+
+---
+
+#### ✅ Step 1: Check for ISI Mark (Mandatory Products)
+Look for the **ISI logo** (3 interlocked arcs) printed or embossed on the product or packaging.
+- Below the ISI logo → **IS XXXX** (Indian Standard number)
+- Below the IS number → **CM/L-XXXXXXX** (7–10 digit license)
+
+#### ✅ Step 2: Verify the CM/L or R-Number
+- **ISI Products:** Switch to the **Number Lookup** tab and enter the CM/L number
+- **Electronics/Chargers:** Look for the CRS symbol + R-XXXXXXXX number → check crsbis.in
+
+#### ✅ Step 3: Gold Jewellery (HUID)
+Look for the 6-character alphanumeric **HUID** laser engraved on the jewellery.
+Enter it in the **Number Lookup** tab to verify.
+
+#### 🚨 Signs of a Fake Product
+- No IS code or license number visible
+- Blurry, smudged, or handwritten marks
+- No BIS Triangle (mandatory since 2023 for hallmarked gold)
+
+---
+
+> **Tip:** Use the official **BIS CARE App** for instant mark scanning using your phone camera.`
+        );
       } finally {
         setIsAnalyzingPhoto(false);
       }
