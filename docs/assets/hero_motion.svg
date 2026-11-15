@@ -132,11 +132,11 @@
       MINISTRY OF CONSUMER AFFAIRS • BUREAU OF INDIAN STANDARDS
     </text>
 
-    <!-- Live Compliance Status Badge -->
-    <rect x="496" y="-3" width="132" height="19" rx="4" fill="#0F172A" stroke="#1E293B" stroke-width="0.8" />
+    <!-- Problem Statement ID Badge -->
+    <rect x="496" y="-3" width="146" height="19" rx="4" fill="#0F172A" stroke="#1E293B" stroke-width="0.8" />
     <circle cx="506" cy="6.5" r="2.5" fill="#38BDF8" />
     <text x="514" y="10" fill="#E2E8F0" class="font-mono" font-size="9.5" font-weight="500" letter-spacing="0.5">
-      SIH 2026 FINALIST
+      SIH 2026 • SIH26107
     </text>
   </g>
 
