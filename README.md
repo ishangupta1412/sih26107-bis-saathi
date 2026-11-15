@@ -4,7 +4,7 @@
 
   <p align="center">
     <strong>Smart India Hackathon 2026</strong> | Problem Statement <strong>SIH26107</strong><br/>
-    <em>Ministry of Consumer Affairs, Food & Public Distribution â€” Bureau of Indian Standards (BIS)</em>
+    <em>Ministry of Consumer Affairs, Food & Public Distribution — Bureau of Indian Standards (BIS)</em>
   </p>
 
   <p align="center">
@@ -13,6 +13,9 @@
     </a>
     <a href="https://github.com/ishangupta1412/sih26107-bis-saathi" target="_blank">
       <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
+    </a>
+    <a href="./LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" />
     </a>
   </p>
 
@@ -29,83 +32,77 @@
 
 ---
 
-## ðŸ“Œ Executive Overview
+## 📌 Executive Overview
 
 **BIS Saathi** is an enterprise-grade, citizen-centric and MSME-enablement GovTech platform engineered for **Smart India Hackathon 2026 (SIH26107)**. 
 
-Indian standards ecosystem encompasses **20,000+ Indian Standards (IS codes)** and hundreds of mandatory **Quality Control Orders (QCOs)**. Small manufacturers (MSMEs) struggle with complex certification pathways, lengthy lab turnaround times, and document opacity; meanwhile, everyday consumers fall victim to counterfeit ISI marks, bogus CRS numbers, and tampered hallmarking.
+The Indian standards ecosystem encompasses **20,000+ Indian Standards (IS codes)** and hundreds of mandatory **Quality Control Orders (QCOs)**. Small manufacturers (MSMEs) face complex certification pathways, lengthy lab turnaround times, and document opacity; meanwhile, everyday consumers fall victim to counterfeit ISI marks, bogus CRS registrations, and tampered gold hallmarking.
 
-BIS Saathi bridges this gap through a **dual-persona multimodal architecture** combining **Gemini Vision forensic mark analysis**, **Supabase `pgvector` semantic retrieval**, and **statutory verification engines**.
-
----
-
-## ðŸŒŸ Key Highlights & Architectural Capabilities
-
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                                 BIS SAATHI CORE                                 â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚   ðŸ” MULTIMODAL VISION â”‚   ðŸ§  REGULATORY RAG       â”‚   âš¡ DUAL-PERSONA WORKFLOW â”‚
-â”‚   Packaging & stamp    â”‚   Clause-grounded Gemini  â”‚   Tailored paths for       â”‚
-â”‚   forensics via Gemini â”‚   RAG over IS codes &     â”‚   MSME manufacturers &     â”‚
-â”‚   Vision AI            â”‚   statutory QCO mandates  â”‚   everyday consumers       â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚   ðŸ‡®ðŸ‡³ 22 INDIC LANGUAGESâ”‚   ðŸ›¡ï¸ GOVTECH ACCREDITED   â”‚   ðŸ“ 35 REGIONAL NODES     â”‚
-â”‚   Voice-first Web      â”‚   GIGW 3.0 & IS 17802     â”‚   Real-time BIS branch     â”‚
-â”‚   Speech API copilot   â”‚   WCAG 2.1 Level AA       â”‚   directory & navigation   â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
+BIS Saathi bridges this gap through a **dual-persona multimodal architecture** combining **Gemini Vision forensic mark analysis**, **Supabase pgvector semantic retrieval**, and **statutory verification engines**.
 
 ---
 
-## ðŸ“¸ Visual Tour & System Modules
+## ⚡ Core Capabilities
 
-### 1. Dual-Persona Onboarding Portal
-> Tailored bifurcated journey: Citizens easily verify everyday appliances & lodge grievances, while MSME enterprises access Scheme I / Scheme II / FMCS certification roadmaps.
-
-<div align="center">
-  <img src="./docs/assets/home_portal.png" alt="BIS Saathi Portal" width="95%" style="border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);" />
-</div>
-
-<br/>
-
-### 2. Multimodal AI Mark & Packaging Inspector (`/checker`)
-> Upload physical product packaging photos or camera snapshots. Gemini Vision automatically inspects label proportions, identifies counterfeit ISI stamps, detects missing `CM/L` license numbers, and verifies against official BIS schemas.
-
-<div align="center">
-  <img src="./docs/assets/gemini_vision_scanner.png" alt="Gemini Vision Scanner" width="95%" style="border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);" />
-</div>
-
-<br/>
-
-### 3. AI Consultation Desk & Regulatory Copilot (`/chat`)
-> Grounded in Indian Standards knowledge. Offers **Quick Mode** for instant consumer guidance and **Deep Audit Mode** for clause-by-clause regulatory analysis with voice input and multimodal attachment support.
-
-<div align="center">
-  <img src="./docs/assets/ai_regulatory_copilot.png" alt="AI Regulatory Copilot" width="95%" style="border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);" />
-</div>
-
-<br/>
-
-### 4. Certification Pathways & Dynamic Document Checklist (`/pathway`)
-> Interactive decision matrix guiding MSMEs through Scheme I (ISI Mark), Scheme II (Compulsory Registration Scheme - CRS), Scheme IV, and FMCS (Foreign Manufacturers). Generates instant downloadable mandatory document dossiers.
-
-<div align="center">
-  <img src="./docs/assets/pathway_matrix.png" alt="Certification Pathways" width="48%" style="border-radius: 8px;" />
-  <img src="./docs/assets/document_checklist.png" alt="Checklist Generator" width="48%" style="border-radius: 8px;" />
-</div>
+| Feature | Technology | Value Delivered |
+| :--- | :--- | :--- |
+| 🔍 **Multimodal Packaging Vision** | Google Gemini 3.8 Vision | Real-time photo forensics to detect fake ISI marks, invalid CML numbers, and label tampering. |
+| 🧠 **Regulatory RAG Copilot** | Supabase pgvector + Gemini | Clause-grounded AI guidance over thousands of Indian Standards (IS codes) & statutory QCOs. |
+| 👥 **Dual-Persona Experience** | Next.js 16 App Router | Tailored workflows: Quick consumer checks vs in-depth MSME certification roadmaps. |
+| 🇮🇳 **22 Indic Languages Support** | Web Speech API | Voice-first accessibility across all 22 Eighth Schedule Indian languages. |
+| 🛡️ **GovTech Accessibility** | GIGW 3.0 & IS 17802:2021 | Strict adherence to Indian Govt web standards & W3C WCAG 2.1 Level AA compliance. |
+| 📍 **National Office Directory** | Geo-filtering & Maps | Direct contact and navigation to 35 regional BIS branch offices across India. |
 
 ---
 
-## ðŸ—ï¸ System Architecture
+## 📸 Visual UI Tour & System Modules
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <h4>🖥️ Dual-Persona Onboarding Portal</h4>
+      <a href="./docs/assets/home_portal.png">
+        <img src="./docs/assets/home_portal.png" alt="Home Portal" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
+      </a>
+      <p><em>Bifurcated workflow for everyday consumers and MSME manufacturers.</em></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <h4>🔍 Gemini Vision Packaging Scanner</h4>
+      <a href="./docs/assets/gemini_vision_scanner.png">
+        <img src="./docs/assets/gemini_vision_scanner.png" alt="Gemini Vision Scanner" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
+      </a>
+      <p><em>Instant camera/upload photo analysis for ISI mark & CML validation.</em></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <h4>🤖 AI Regulatory Copilot</h4>
+      <a href="./docs/assets/ai_regulatory_copilot.png">
+        <img src="./docs/assets/ai_regulatory_copilot.png" alt="AI Regulatory Copilot" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
+      </a>
+      <p><em>Clause-grounded advice with Quick Mode & Deep Audit switcher.</em></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <h4>📋 Certification Pathways Matrix</h4>
+      <a href="./docs/assets/pathway_matrix.png">
+        <img src="./docs/assets/pathway_matrix.png" alt="Pathways Matrix" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
+      </a>
+      <p><em>Scheme I / Scheme II / FMCS roadmap & dynamic document checklist.</em></p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TD
     subgraph Client ["Client Presentation Layer (Next.js 16 + React 19)"]
-        A["Citizen / Consumer Flow"] --> C["Responsive Accessible UI (GIGW 3.0)"]
+        A["Citizen / Consumer Flow"] --> C["Accessible UI (GIGW 3.0 & IS 17802)"]
         B["MSME / Industry Flow"] --> C
-        C --> D["Speech-to-Speech (22 Indic Languages)"]
-        C --> E["Camera / File Dropzone Uploader"]
+        C --> D["Web Speech API (22 Indic Languages)"]
+        C --> E["Camera / File Uploader"]
     end
 
     subgraph Edge ["Next.js App Router Edge & API Gateways"]
@@ -116,12 +113,12 @@ flowchart TD
 
     subgraph Intelligence ["AI & Knowledge Engine"]
         F --> I["Gemini 3.8 Flash (Context Grounding)"]
-        G --> J["Gemini 3.8 Vision (Forensic Image Analysis)"]
+        G --> J["Gemini 3.8 Vision (Forensic Analysis)"]
         I <--> K["Supabase pgvector (RAG Embeddings)"]
-        K --> L[("Indian Standards (IS Codes) & QCO Registry")]
+        K --> L[("Indian Standards & QCO Registry")]
     end
 
-    subgraph Statutory ["Deterministic Validation Services"]
+    subgraph Statutory ["Deterministic Validation Engines"]
         G --> M["ISI CM/L Regex Engine (7-10 digits)"]
         G --> N["CRS R-Registration Engine"]
         G --> O["Hallmark HUID Verifier (6 alphanumeric)"]
@@ -130,48 +127,48 @@ flowchart TD
 
 ---
 
-## ðŸ”¬ Mathematical & Validation Rigor
+## 🔬 Mathematical & Validation Rigor
 
-### 1. Deterministic Mark Validation Engine
-Rather than relying purely on probabilistic LLMs, BIS Saathi deploys strict deterministic validators:
-* **ISI Certification Mark**: Strictly parsed against `^CM\/L-[0-9]{7,10}$`
-* **CRS Registration Mark**: Parsed against `^R-[0-9]{8}$`
-* **Gold Hallmarking (HUID)**: 6-character alphanumeric checksum verification `^[A-Z0-9]{6}$`
+### Deterministic Mark Validation Engine
+Rather than relying solely on generative LLMs, BIS Saathi deploys strict deterministic regex validators:
+- **ISI Certification Mark**: Strictly parsed against `^CM/L-[0-9]{7,10}$`
+- **CRS Registration Mark**: Parsed against `^R-[0-9]{8}$`
+- **Gold Hallmarking (HUID)**: 6-character alphanumeric checksum verification `^[A-Z0-9]{6}$`
 
-### 2. Multimodal Packaging Inspection
-* **Bounding-Box Label Isolation**: Isolates mark bounding coordinates.
-* **Proportion Verification**: Evaluates whether standard IS code appears above the mark and CM/L license number is explicitly formatted below.
-* **Risk Score Heuristics**: Generates a confidence metric (0-100%) indicating counterfeit probability.
+### Multimodal Packaging Inspection
+- **Bounding-Box Label Isolation**: Isolates mark bounding coordinates on uploaded product packages.
+- **Proportion Verification**: Evaluates whether standard IS code appears directly above the mark and CM/L license number is explicitly formatted below.
+- **Risk Score Heuristics**: Generates a confidence metric (0-100%) indicating counterfeit probability.
 
 ---
 
-## âš–ï¸ Compliance & Governance Matrix
+## ⚖️ Compliance & Governance Matrix
 
 | Framework / Standard | Status | Implementation Details |
 | :--- | :---: | :--- |
-| **GIGW 3.0** | âœ… **Compliant** | Guidelines for Indian Government Websites (National Portal Standards). |
-| **IS 17802:2021** | âœ… **Certified** | Indian Standard for Accessibility in ICT Products (W3C WCAG 2.1 AA). |
-| **DPDP Act 2023** | âœ… **Enforced** | Zero PII retention on photo audits; anonymous whistleblower grievance routing. |
-| **BIS Act 2016** | âœ… **Grounded** | Statutory penalties under Section 29 mapped directly into AI advisory desk. |
+| **GIGW 3.0** | ✅ **Compliant** | Guidelines for Indian Government Websites (National Portal Standards). |
+| **IS 17802:2021** | ✅ **Certified** | Indian Standard for Accessibility in ICT Products (W3C WCAG 2.1 AA). |
+| **DPDP Act 2023** | ✅ **Enforced** | Zero PII retention on photo audits; anonymous whistleblower grievance routing. |
+| **BIS Act 2016** | ✅ **Grounded** | Statutory penalties under Section 29 mapped directly into AI advisory desk. |
 
 ---
 
-## ðŸ’» Tech Stack Summary
+## 💻 Tech Stack Summary
 
-* **Frontend**: Next.js 16 (App Router), React 19, TypeScript (Strict Mode), Tailwind CSS v4, Radix UI Primitives, Lucide React
-* **AI & Vision**: Google Gemini 3.8 Flash (Multimodal Text & Vision API)
-* **Vector Database**: Supabase with PostgreSQL & `pgvector`
-* **Voice & A11y**: Web Speech API (22 Scheduled Indian Languages), Skip Links, ARIA 1.2
-* **Testing & QA**: Vitest (Unit Tests), Playwright (E2E Accessibility Auditing)
-* **Deployment**: Vercel Serverless Edge Architecture
+- **Frontend**: Next.js 16 (App Router), React 19, TypeScript (Strict Mode), Tailwind CSS v4, Radix UI Primitives, Lucide React
+- **AI & Vision**: Google Gemini 3.8 Flash (Multimodal Text & Vision API)
+- **Vector Database**: Supabase with PostgreSQL & `pgvector`
+- **Voice & Accessibility**: Web Speech API (22 Scheduled Indian Languages), Skip Links, ARIA 1.2
+- **Testing & QA**: Vitest (Unit Tests), Playwright (E2E Accessibility Auditing)
+- **Deployment**: Vercel Serverless Edge Architecture
 
 ---
 
-## ðŸš€ Quickstart & Local Development
+## 🚀 Quickstart & Local Development
 
 ### Prerequisites
-* **Node.js**: `v20.x` or higher
-* **Package Manager**: `pnpm` (recommended) or `npm`
+- **Node.js**: `v20.x` or higher
+- **Package Manager**: `pnpm` (recommended) or `npm`
 
 ### Installation
 ```bash
@@ -203,16 +200,16 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ---
 
-## ðŸ‘¨â€ðŸ’» Team & Attribution
+## 👨‍💻 Team & Attribution
 
-* **Built for**: Smart India Hackathon 2026 (SIH26107)
-* **Lead Engineer**: [Ishan Gupta](https://github.com/ishangupta1412) ([LinkedIn](https://www.linkedin.com/in/ishan-gupta-976192419))
-* **Organization**: Bureau of Indian Standards (BIS), Ministry of Consumer Affairs, Food & Public Distribution
-* **License**: MIT
+- **Built for**: Smart India Hackathon 2026 (Problem Statement: SIH26107)
+- **Team**: Team Strophoid (Certificate of Participation awarded to Ishan Gupta)
+- **Lead Engineer**: [Ishan Gupta](https://github.com/ishangupta1412) ([LinkedIn](https://www.linkedin.com/in/ishan-gupta-976192419))
+- **Organization**: Bureau of Indian Standards (BIS), Ministry of Consumer Affairs, Food & Public Distribution
+- **License**: [MIT License](./LICENSE)
 
 <br/>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=90&section=footer" width="100%" />
 </div>
-
