@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="100%" height="280">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="50%" stop-color="#0B1329" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Neon Header Gradient with Animation -->
+    <linearGradient id="textNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9933">
+        <animate attributeName="stop-color" values="#FF9933;#00F0FF;#10B981;#FF9933" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#00F0FF">
+        <animate attributeName="stop-color" values="#00F0FF;#10B981;#FF9933;#00F0FF" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#10B981">
+        <animate attributeName="stop-color" values="#10B981;#FF9933;#00F0FF;#10B981" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Scanner Laser Beam Gradient -->
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.4" />
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowOrange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes scanline {
+      0% { transform: translateY(0px); opacity: 0; }
+      15% { opacity: 0.9; }
+      85% { opacity: 0.9; }
+      100% { transform: translateY(280px); opacity: 0; }
+    }
+    @keyframes pulseRing {
+      0% { r: 6px; opacity: 1; }
+      100% { r: 18px; opacity: 0; }
+    }
+    @keyframes floatShield {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes dataPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px #00F0FF); }
+    }
+    .scanner-beam {
+      animation: scanline 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .shield-float {
+      animation: floatShield 6s ease-in-out infinite;
+      transform-origin: 820px 140px;
+    }
+    .radar-spin {
+      animation: radarSpin 12s linear infinite;
+      transform-origin: 820px 140px;
+    }
+    .pulse-data {
+      animation: dataPulse 3s ease-in-out infinite;
+    }
+    .text-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+    .text-mono {
+      font-family: 'Fira Code', 'Courier New', monospace;
+    }
+  </style>
+
+  <!-- Canvas Background -->
+  <rect width="960" height="280" rx="16" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5" />
+  <rect width="960" height="280" rx="16" fill="url(#cyberGrid)" />
+
+  <!-- Background Decorative Cyber Orbs -->
+  <circle cx="120" cy="40" r="140" fill="#FF9933" opacity="0.08" filter="url(#glowOrange)" />
+  <circle cx="820" cy="140" r="160" fill="#00F0FF" opacity="0.07" filter="url(#glowCyan)" />
+
+  <!-- Animated Scanning Laser Line -->
+  <rect class="scanner-beam" x="0" y="0" width="960" height="2" fill="url(#laserGrad)" />
+
+  <!-- Top Status Bar / Breadcrumb -->
+  <g transform="translate(48, 42)">
+    <!-- Live Green Pulse Indicator -->
+    <circle cx="8" cy="8" r="8" fill="#10B981" opacity="0.25">
+      <animate attributeName="r" values="5;14;5" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="8" cy="8" r="4.5" fill="#10B981" />
+    
+    <text x="26" y="12" fill="#94A3B8" class="text-mono" font-size="12" font-weight="600" letter-spacing="1">
+      MINISTRY OF CONSUMER AFFAIRS • BUREAU OF INDIAN STANDARDS • SIH 2026
+    </text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <g transform="translate(48, 115)">
+    <text class="text-title" x="0" y="0" font-size="52" fill="url(#textNeon)" filter="url(#glowCyan)">
+      BIS SAATHI
+    </text>
+  </g>
+
+  <!-- Dynamic Mission Subtitle -->
+  <g transform="translate(48, 146)">
+    <text class="text-mono" x="0" y="0" font-size="15" fill="#E2E8F0" font-weight="500" letter-spacing="0.5">
+      Intelligent Multimodal Regulatory Cockpit &amp; Indian Standards Copilot
+    </text>
+  </g>
+
+  <!-- Tag Pills Row -->
+  <g transform="translate(48, 185)">
+    <!-- Pill 1: Gemini Vision -->
+    <rect x="0" y="0" width="175" height="32" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="16" cy="16" r="4" fill="#38BDF8" />
+    <text x="28" y="20.5" fill="#F1F5F9" class="text-mono" font-size="11.5" font-weight="600">Gemini 3.8 Vision</text>
+
+    <!-- Pill 2: pgvector RAG -->
+    <rect x="187" y="0" width="165" height="32" rx="8" fill="#0F172A" stroke="#34D399" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="203" cy="16" r="4" fill="#34D399" />
+    <text x="215" y="20.5" fill="#F1F5F9" class="text-mono" font-size="11.5" font-weight="600">pgvector RAG</text>
+
+    <!-- Pill 3: Indic Voice 22 -->
+    <rect x="364" y="0" width="185" height="32" rx="8" fill="#0F172A" stroke="#FBBF24" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="380" cy="16" r="4" fill="#FBBF24" />
+    <text x="392" y="20.5" fill="#F1F5F9" class="text-mono" font-size="11.5" font-weight="600">22 Indic Languages</text>
+
+    <!-- Pill 4: GIGW 3.0 / WCAG AA -->
+    <rect x="561" y="0" width="175" height="32" rx="8" fill="#0F172A" stroke="#F43F5E" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="577" cy="16" r="4" fill="#F43F5E" />
+    <text x="589" y="20.5" fill="#F1F5F9" class="text-mono" font-size="11.5" font-weight="600">GIGW 3.0 • WCAG AA</text>
+  </g>
+
+  <!-- Right Floating Geometric Hologram / Shield -->
+  <g class="shield-float">
+    <!-- Rotating Cyber Ring -->
+    <circle class="radar-spin" cx="820" cy="140" r="75" fill="none" stroke="#00F0FF" stroke-width="1.2" stroke-dasharray="8 6 14 4" stroke-opacity="0.4" />
+    <circle cx="820" cy="140" r="62" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.5" />
+    <circle cx="820" cy="140" r="48" fill="#0F172A" stroke="#FF9933" stroke-width="1.5" stroke-opacity="0.7" />
+
+    <!-- Center Emblem Geometric Hexagon / Checkmark -->
+    <polygon points="820,110 848,126 848,154 820,170 792,154 792,126" fill="none" stroke="url(#textNeon)" stroke-width="2.5" filter="url(#glowCyan)" />
+
+    <!-- Core ISI Diamond / Star Node -->
+    <circle class="pulse-data" cx="820" cy="140" r="7" fill="#00F0FF" filter="url(#glowCyan)" />
+    <path d="M 814 140 L 826 140 M 820 134 L 820 146" stroke="#030712" stroke-width="2" />
+
+    <!-- Orbiting Satellite Data Dots -->
+    <circle cx="868" cy="118" r="3.5" fill="#34D399" class="pulse-data">
+      <animateTransform attributeName="transform" type="rotate" from="0 820 140" to="360 820 140" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="772" cy="162" r="3" fill="#FBBF24" class="pulse-data">
+      <animateTransform attributeName="transform" type="rotate" from="360 820 140" to="0 820 140" dur="10s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <rect x="0" y="277" width="960" height="3" fill="url(#textNeon)" />
+</svg>

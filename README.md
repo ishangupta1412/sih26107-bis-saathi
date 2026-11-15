@@ -1,8 +1,8 @@
 ﻿<div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=180&section=header&text=BIS%20SAATHI&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Intelligent%20Multimodal%20Regulatory%20Cockpit%20for%20Indian%20Standards&descFontSize=18&descAlignY=62&descColor=A5F3FC" width="100%" alt="BIS Saathi Banner" />
+  <img src="./docs/assets/hero_motion.svg" width="100%" alt="BIS Saathi Hero Motion Graphics" />
 
-  <p align="center">
+  <br/><br/>
     <strong>Smart India Hackathon 2026</strong> | Problem Statement <strong>SIH26107</strong><br/>
     <em>Ministry of Consumer Affairs, Food & Public Distribution — Bureau of Indian Standards (BIS)</em>
   </p>
@@ -136,6 +136,11 @@ Rather than relying solely on generative LLMs, BIS Saathi deploys strict determi
 - **Gold Hallmarking (HUID)**: 6-character alphanumeric checksum verification `^[A-Z0-9]{6}$`
 
 ### Multimodal Packaging Inspection
+<div align="center">
+  <img src="./docs/assets/scanner_demo_animated.svg" width="95%" alt="Animated Packaging Forensics HUD" />
+</div>
+<br/>
+
 - **Bounding-Box Label Isolation**: Isolates mark bounding coordinates on uploaded product packages.
 - **Proportion Verification**: Evaluates whether standard IS code appears directly above the mark and CM/L license number is explicitly formatted below.
 - **Risk Score Heuristics**: Generates a confidence metric (0-100%) indicating counterfeit probability.
