@@ -1,8 +1,6 @@
 ﻿<div align="center">
 
-<img src="./docs/assets/hero_motion.svg" width="100%" alt="BIS-AI Saathi Header" />
-
-# BIS-AI Saathi
+# 🇮🇳 BIS-AI Saathi
 
 ### Intelligent Multimodal Regulatory Cockpit & Indian Standards Guidance Platform
 
@@ -149,15 +147,6 @@ Rather than relying purely on probabilistic LLM responses, **BIS-AI Saathi** exe
 - **CRS Registration**: Enforces `^R-[0-9]{8}$` for electronic goods mandated under MeitY QCO orders.
 - **Gold Hallmarking (HUID)**: 6-character alphanumeric checksum validation countering fake laser-engraved hallmarks.
 - **Proportion Analysis**: Verifies that standard IS code is placed centrally above the mark and CM/L license number is positioned below according to official BIS drafting guidelines.
-
----
-
-## Central Operations & Command Center
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif" width="75%" alt="Command Center" style="border-radius: 8px;" />
-  <p><sub>Continuous regulatory sync monitoring changes in BIS Quality Control Orders (QCOs) and Gazette notifications.</sub></p>
-</div>
 
 ---
 
