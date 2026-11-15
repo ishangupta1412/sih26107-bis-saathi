@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 290" width="100%" height="290">
+  <defs>
+    <!-- Background Luxury Gradients -->
+    <linearGradient id="canvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="40%" stop-color="#0B1325" />
+      <stop offset="100%" stop-color="#04060E" />
+    </linearGradient>
+
+    <!-- Metallic Sheen for BIS-AI -->
+    <linearGradient id="metallicTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#F1F5F9" />
+      <stop offset="70%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+
+    <!-- Saffron / Gold Emblem Gradient -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB020" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Refined Cyan Laser Sheen -->
+    <linearGradient id="sheenSweep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Indian Tricolor Micro Hairline -->
+    <linearGradient id="tricolorHairline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9933" />
+      <stop offset="35%" stop-color="#FF9933" />
+      <stop offset="45%" stop-color="#FFFFFF" />
+      <stop offset="55%" stop-color="#FFFFFF" />
+      <stop offset="65%" stop-color="#138808" />
+      <stop offset="100%" stop-color="#138808" />
+    </linearGradient>
+
+    <!-- High-Precision Dot Matrix Pattern -->
+    <pattern id="dotMatrix" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.9" fill="#94A3B8" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Soft Ambient Light Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="badgeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes spinClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spinCounter {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulseAura {
+      0%, 100% { opacity: 0.25; transform: scale(0.98); }
+      50% { opacity: 0.55; transform: scale(1.02); }
+    }
+    @keyframes pingDot {
+      0% { r: 3.5px; opacity: 1; }
+      75%, 100% { r: 10px; opacity: 0; }
+    }
+    @keyframes sweepBeam {
+      0% { transform: translateX(-300px); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { transform: translateX(1100px); opacity: 0; }
+    }
+    @keyframes subtleBreathe {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4)); }
+    }
+    .spin-cw {
+      animation: spinClockwise 32s linear infinite;
+      transform-origin: 835px 145px;
+    }
+    .spin-ccw {
+      animation: spinCounter 24s linear infinite;
+      transform-origin: 835px 145px;
+    }
+    .laser-line {
+      animation: sweepBeam 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: "JetBrains Mono", "SF Mono", "Fira Code", Menlo, monospace;
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="980" height="290" rx="14" fill="url(#canvasGrad)" stroke="#1E293B" stroke-width="1.2" />
+  <rect width="980" height="290" rx="14" fill="url(#dotMatrix)" />
+
+  <!-- Ambient Light Accents (Restrained, High-End Studio) -->
+  <circle cx="835" cy="145" r="160" fill="#0284C7" opacity="0.08" filter="url(#softGlow)" />
+  <circle cx="140" cy="50" r="130" fill="#FF9933" opacity="0.05" filter="url(#softGlow)" />
+
+  <!-- Top Hairline National Tricolor Ribbon -->
+  <rect x="0" y="0" width="980" height="2.5" rx="1" fill="url(#tricolorHairline)" />
+
+  <!-- Sweep Laser Line (Ultra Subtle) -->
+  <rect class="laser-line" x="0" y="1" width="220" height="1.5" fill="url(#sheenSweep)" />
+
+  <!-- ================= LEFT REGULATORY HIERARCHY ================= -->
+
+  <!-- Top Metadata Bar -->
+  <g transform="translate(48, 44)">
+    <!-- Live Operational Dot with Ping -->
+    <circle cx="6" cy="6" r="3.5" fill="#10B981" />
+    <circle cx="6" cy="6" r="3.5" fill="#10B981" opacity="0.6">
+      <animate attributeName="r" values="3.5;10;3.5" dur="2.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Authority Hierarchy Typography -->
+    <text x="24" y="9.5" fill="#94A3B8" class="font-mono" font-size="11" font-weight="600" letter-spacing="1.2">
+      MINISTRY OF CONSUMER AFFAIRS • BUREAU OF INDIAN STANDARDS
+    </text>
+
+    <!-- Live Compliance Status Badge -->
+    <rect x="496" y="-3" width="132" height="19" rx="4" fill="#0F172A" stroke="#1E293B" stroke-width="0.8" />
+    <circle cx="506" cy="6.5" r="2.5" fill="#38BDF8" />
+    <text x="514" y="10" fill="#E2E8F0" class="font-mono" font-size="9.5" font-weight="500" letter-spacing="0.5">
+      SIH 2026 FINALIST
+    </text>
+  </g>
+
+  <!-- Hero Platform Branding -->
+  <g transform="translate(48, 116)">
+    <!-- BIS-AI Main Title -->
+    <text class="font-sans" x="0" y="0" font-size="44" font-weight="800" fill="url(#metallicTitle)" letter-spacing="-0.5">
+      BIS-AI <tspan fill="url(#goldAccent)">SAATHI</tspan>
+    </text>
+
+    <!-- Engineering Edition Micro-badge -->
+    <rect x="366" y="-32" width="62" height="18" rx="4" fill="#0284C7" fill-opacity="0.15" stroke="#38BDF8" stroke-width="0.8" />
+    <text x="374" y="-20" fill="#38BDF8" class="font-mono" font-size="9" font-weight="700" letter-spacing="0.8">
+      v2.4 LTS
+    </text>
+  </g>
+
+  <!-- Technical Description -->
+  <g transform="translate(48, 148)">
+    <text class="font-sans" x="0" y="0" font-size="14.5" fill="#94A3B8" font-weight="400" letter-spacing="0.2">
+      Next-Generation Multimodal Regulatory Cockpit &amp; Indian Standards Copilot
+    </text>
+  </g>
+
+  <!-- Precision Pillar Badges (Restrained Glassmorphism) -->
+  <g transform="translate(48, 192)">
+    <!-- Badge 1: Gemini 3.8 Vision -->
+    <rect x="0" y="0" width="170" height="34" rx="7" fill="#0B1329" fill-opacity="0.8" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.35" />
+    <circle cx="16" cy="17" r="3.5" fill="#38BDF8" />
+    <text x="28" y="21" fill="#F1F5F9" class="font-sans" font-size="12" font-weight="600" letter-spacing="0.2">Gemini 3.8 Vision</text>
+    <rect x="135" y="9" width="24" height="16" rx="3" fill="#1E293B" />
+    <text x="139" y="20.5" fill="#94A3B8" class="font-mono" font-size="8.5" font-weight="600">HUD</text>
+
+    <!-- Badge 2: pgvector RAG -->
+    <rect x="180" y="0" width="158" height="34" rx="7" fill="#0B1329" fill-opacity="0.8" stroke="#10B981" stroke-width="1" stroke-opacity="0.35" />
+    <circle cx="196" cy="17" r="3.5" fill="#10B981" />
+    <text x="208" y="21" fill="#F1F5F9" class="font-sans" font-size="12" font-weight="600" letter-spacing="0.2">Supabase RAG</text>
+    <rect x="296" y="9" width="32" height="16" rx="3" fill="#1E293B" />
+    <text x="300" y="20.5" fill="#94A3B8" class="font-mono" font-size="8.5" font-weight="600">HNSW</text>
+
+    <!-- Badge 3: 22 Indic Languages -->
+    <rect x="348" y="0" width="176" height="34" rx="7" fill="#0B1329" fill-opacity="0.8" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.35" />
+    <circle cx="364" cy="17" r="3.5" fill="#F59E0B" />
+    <text x="376" y="21" fill="#F1F5F9" class="font-sans" font-size="12" font-weight="600" letter-spacing="0.2">22 Indic Languages</text>
+    <rect x="487" y="9" width="27" height="16" rx="3" fill="#1E293B" />
+    <text x="491" y="20.5" fill="#94A3B8" class="font-mono" font-size="8.5" font-weight="600">TTS</text>
+
+    <!-- Badge 4: GIGW 3.0 / WCAG AA -->
+    <rect x="534" y="0" width="168" height="34" rx="7" fill="#0B1329" fill-opacity="0.8" stroke="#EC4899" stroke-width="1" stroke-opacity="0.35" />
+    <circle cx="550" cy="17" r="3.5" fill="#EC4899" />
+    <text x="562" y="21" fill="#F1F5F9" class="font-sans" font-size="12" font-weight="600" letter-spacing="0.2">GIGW 3.0 • WCAG</text>
+    <rect x="668" y="9" width="24" height="16" rx="3" fill="#1E293B" />
+    <text x="673" y="20.5" fill="#94A3B8" class="font-mono" font-size="8.5" font-weight="600">AA</text>
+  </g>
+
+  <!-- ================= RIGHT PRECISION REGULATORY RADAR ================= -->
+  <g id="regulatoryOrbitalCenter" transform="translate(0, 0)">
+    <!-- Ambient Halo Glow -->
+    <circle cx="835" cy="145" r="95" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="2 6" opacity="0.6" />
+
+    <!-- Outer Precision Caliper Ring (Counter-Clockwise) -->
+    <g class="spin-ccw">
+      <circle cx="835" cy="145" r="82" fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="6 14 2 14" stroke-opacity="0.5" />
+      <circle cx="835" cy="63" r="3" fill="#38BDF8" opacity="0.8" />
+      <circle cx="835" cy="227" r="3" fill="#38BDF8" opacity="0.8" />
+    </g>
+
+    <!-- Mid Technical Metric Ring (Clockwise) -->
+    <g class="spin-cw">
+      <circle cx="835" cy="145" r="66" fill="none" stroke="#64748B" stroke-width="1" stroke-dasharray="20 8 4 8" stroke-opacity="0.4" />
+      <circle cx="901" cy="145" r="2.5" fill="#10B981" />
+      <circle cx="769" cy="145" r="2.5" fill="#F59E0B" />
+    </g>
+
+    <!-- Inner Shield Housing Glass Disc -->
+    <circle cx="835" cy="145" r="50" fill="#0B1329" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+
+    <!-- Geometric Indian Standards / ISI Verification Seal -->
+    <!-- Authentic Hexagonal Emblem Structure -->
+    <polygon points="835,108 867,126.5 867,163.5 835,182 803,163.5 803,126.5" fill="none" stroke="#38BDF8" stroke-width="1.8" stroke-opacity="0.8" />
+    <polygon points="835,114 862,129.5 862,160.5 835,176 808,160.5 808,129.5" fill="#0284C7" fill-opacity="0.08" stroke="#FF9933" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="4 3" />
+
+    <!-- Core ISI Standards Mark Monogram -->
+    <text x="835" y="142" font-family="'Inter', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">
+      ISI
+    </text>
+    <text x="835" y="156" class="font-mono" font-weight="700" font-size="8" fill="#38BDF8" text-anchor="middle" letter-spacing="1">
+      VERIFIED
+    </text>
+
+    <!-- Micro Orbiting Satellites -->
+    <circle cx="835" cy="145" r="3" fill="#10B981">
+      <animateTransform attributeName="transform" type="rotate" from="0 835 145" to="360 835 145" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Bottom Accent Line: Razor Thin GovTech Border -->
+  <rect x="0" y="288" width="980" height="2" fill="url(#tricolorHairline)" opacity="0.9" />
+</svg>
