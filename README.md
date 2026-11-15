@@ -1,8 +1,10 @@
 ﻿<div align="center">
 
-# BIS Saathi
+<img src="./docs/assets/hero_motion.svg" width="100%" alt="BIS-AI Saathi Header" />
 
-### Intelligent Multimodal Regulatory Cockpit & Indian Standards Guidance System
+# BIS-AI Saathi
+
+### Intelligent Multimodal Regulatory Cockpit & Indian Standards Guidance Platform
 
 **Smart India Hackathon 2026** • Problem Statement **SIH26107**  
 *Ministry of Consumer Affairs, Food & Public Distribution — Bureau of Indian Standards (BIS)*
@@ -10,7 +12,7 @@
 <br/>
 
 [**Live Production Portal**](https://bis-saathi-nine.vercel.app/) &nbsp;•&nbsp; 
-[**Source Code**](https://github.com/ishangupta1412/sih26107-bis-saathi) &nbsp;•&nbsp; 
+[**Source Code**](https://github.com/ishangupta1412/BIS-AI-Saathi) &nbsp;•&nbsp; 
 [**MIT License**](./LICENSE)
 
 <br/>
@@ -31,9 +33,9 @@
 
 India's standards ecosystem encompasses over 20,000 Indian Standards (IS codes) and hundreds of mandatory Quality Control Orders (QCOs). Small and medium manufacturers (MSMEs) struggle with fragmented certification roadmaps, opaque testing lead times, and manual document verification. Concurrently, consumers face counterfeit ISI marks, unverified CRS registrations, and tampered gold hallmarking.
 
-**BIS Saathi** addresses both sides of this ecosystem through a dual-persona architecture:
+**BIS-AI Saathi** addresses both sides of this ecosystem through a dual-persona architecture:
 
-1. **For Citizens & Consumers**: Instant multimodal verification of physical product packaging using Gemini Vision, deterministic license validation (ISI, CRS, HUID), and voice-enabled advisory across 22 Scheduled Indic languages.
+1. **For Citizens & Consumers**: Instant multimodal verification of physical product packaging using Gemini Vision, deterministic statutory license validation (ISI, CRS, HUID), and voice-enabled advisory across 22 Scheduled Indic languages.
 2. **For MSME Manufacturers**: End-to-end certification pathway mapping (Scheme I, Scheme II, FMCS), automated document checklist generation, and clause-grounded regulatory retrieval over Indian Standards.
 
 ---
@@ -84,59 +86,78 @@ flowchart TD
 
 ---
 
-## Production Interface
+## Production Interface & Verified Workflows
 
-<table width="100%">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <h4>Dual-Persona Onboarding Portal</h4>
-      <a href="./docs/assets/home_portal.png">
-        <img src="./docs/assets/home_portal.png" alt="Home Portal" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);" />
-      </a>
-      <p><sub>Bifurcated portal for consumer protection and MSME certification roadmaps.</sub></p>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <h4>Gemini Vision Mark Scanner</h4>
-      <a href="./docs/assets/gemini_vision_scanner.png">
-        <img src="./docs/assets/gemini_vision_scanner.png" alt="Gemini Vision Scanner" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);" />
-      </a>
-      <p><sub>Live camera and photo forensics for ISI mark and license validation.</sub></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <h4>AI Regulatory Copilot</h4>
-      <a href="./docs/assets/ai_regulatory_copilot.png">
-        <img src="./docs/assets/ai_regulatory_copilot.png" alt="AI Regulatory Copilot" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);" />
-      </a>
-      <p><sub>Clause-grounded advisory with Quick Guidance and Deep Regulatory Audit modes.</sub></p>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <h4>Certification Pathways Matrix</h4>
-      <a href="./docs/assets/pathway_matrix.png">
-        <img src="./docs/assets/pathway_matrix.png" alt="Pathways Matrix" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);" />
-      </a>
-      <p><sub>Scheme I, II, and FMCS roadmaps with dynamic document checklist generation.</sub></p>
-    </td>
-  </tr>
-</table>
+All views captured directly from the live production portal in standardized 16:9 widescreen desktop format:
 
----
-
-## Validation Rigor & Forensic HUD
-
-Rather than relying purely on probabilistic LLM responses, BIS Saathi deploys deterministic statutory validators alongside vision analysis:
-
+### 1. Dual-Persona Onboarding Portal
 <div align="center">
-  <img src="./docs/assets/scanner_demo_animated.svg" width="92%" alt="Forensic Scanner HUD" />
+  <img src="./docs/assets/feat_home_portal_landscape.png" width="100%" alt="Home Portal" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);" />
+  <p><sub>Bifurcated gateway routing consumers toward instant mark protection and MSMEs toward statutory certification roadmaps.</sub></p>
 </div>
 
 <br/>
 
-- **ISI Certification Mark**: Formatted and verified against `^CM/L-[0-9]{7,10}$`.
-- **CRS Registration**: Formatted and validated against `^R-[0-9]{8}$`.
-- **Gold Hallmarking (HUID)**: 6-character alphanumeric checksum verification `^[A-Z0-9]{6}$`.
-- **Proportion Analysis**: Verifies that standard IS code is placed centrally above the mark and CM/L license number is positioned below according to BIS drafting guidelines.
+### 2. Multimodal Mark & License Authentication Checker
+<div align="center">
+  <img src="./docs/assets/feat_vision_scanner_landscape.png" width="100%" alt="Vision Scanner" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);" />
+  <p><sub>Camera and photo forensics verifying 7–10 digit ISI CM/L numbers, CRS registrations, and gold HUID checksums against statutory standards.</sub></p>
+</div>
+
+<br/>
+
+### 3. AI Regulatory Copilot with Clause Grounding
+<div align="center">
+  <img src="./docs/assets/feat_regulatory_copilot_landscape.png" width="100%" alt="AI Regulatory Copilot" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);" />
+  <p><sub>Real-time copilot grounded in 20,000+ Indian Standards (IS codes) supporting English, Hindi, and Hinglish with zero hallucination guardrails.</sub></p>
+</div>
+
+<br/>
+
+### 4. Certification Pathways & Schemes Matrix
+<div align="center">
+  <img src="./docs/assets/feat_pathway_matrix_landscape.png" width="100%" alt="Certification Pathways" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);" />
+  <p><sub>Interactive comparative analysis of Scheme I (ISI Mark), Scheme II (Compulsory Registration), and FMCS compliance paths.</sub></p>
+</div>
+
+<br/>
+
+### 5. Mandatory Document Checklist Generator
+<div align="center">
+  <img src="./docs/assets/feat_document_checklist_landscape.png" width="100%" alt="Document Checklist Generator" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);" />
+  <p><sub>Automated statutory documentation package compiler with single-click PDF export for factory premises, lab equipment, and test certificates.</sub></p>
+</div>
+
+---
+
+## Deterministic Statutory Validation Engine
+
+Rather than relying purely on probabilistic LLM responses, **BIS-AI Saathi** executes deterministic validation rules to ensure statutory integrity:
+
+```
+┌─────────────────────────┬──────────────────────────────┬─────────────────────────┬──────────────────┐
+│ Certification Mark      │ Statutory Pattern Specification │ Normalization Protocol  │ Compliance Check │
+├─────────────────────────┼──────────────────────────────┼─────────────────────────┼──────────────────┤
+│ ISI Standard Mark       │ ^CM/L-[0-9]{7,10}$           │ Strict uppercase prefix │ Pass / Reject    │
+│ Compulsory Registration │ ^R-[0-9]{8}$                 │ 8-digit deterministic   │ Pass / Reject    │
+│ Gold Hallmarking (HUID) │ ^[A-Z0-9]{6}$                │ 6-char alphanumeric     │ Checksum Match   │
+│ Packaging Typography    │ Centralized IS Code Placement│ Aspect ratio > 1:1.4    │ Dimension Audit  │
+└─────────────────────────┴──────────────────────────────┴─────────────────────────┴──────────────────┘
+```
+
+- **ISI Certification Mark**: Validated against `^CM/L-[0-9]{7,10}$` to counter fraudulent 5-digit stamps.
+- **CRS Registration**: Enforces `^R-[0-9]{8}$` for electronic goods mandated under MeitY QCO orders.
+- **Gold Hallmarking (HUID)**: 6-character alphanumeric checksum validation countering fake laser-engraved hallmarks.
+- **Proportion Analysis**: Verifies that standard IS code is placed centrally above the mark and CM/L license number is positioned below according to official BIS drafting guidelines.
+
+---
+
+## Central Operations & Command Center
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif" width="75%" alt="Command Center" style="border-radius: 8px;" />
+  <p><sub>Continuous regulatory sync monitoring changes in BIS Quality Control Orders (QCOs) and Gazette notifications.</sub></p>
+</div>
 
 ---
 
@@ -165,8 +186,8 @@ Rather than relying purely on probabilistic LLM responses, BIS Saathi deploys de
 
 ```bash
 # Clone repository
-git clone https://github.com/ishangupta1412/sih26107-bis-saathi.git
-cd sih26107-bis-saathi
+git clone https://github.com/ishangupta1412/BIS-AI-Saathi.git
+cd BIS-AI-Saathi
 
 # Install dependencies
 pnpm install
