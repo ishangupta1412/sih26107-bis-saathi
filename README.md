@@ -196,6 +196,55 @@ Rather than relying purely on probabilistic LLM responses, **BIS-AI Saathi** exe
 
 ---
 
+## Project Structure
+
+```
+bis-ai-saathi/
+├── app/                            # Next.js 16 App Router
+│   ├── page.tsx                    # Home portal — citizen entry point
+│   ├── checker/                    # ISI Mark verification page
+│   ├── chat/                       # AI Regulatory Copilot chat interface
+│   ├── pathway/                    # Certification pathway matrix
+│   ├── complaint/                  # Consumer complaint filing
+│   ├── offices/                    # BIS regional office locator
+│   ├── standards/                  # IS code library browser
+│   └── api/                        # Serverless API routes
+│       ├── chat/route.ts           # Gemini 3.8 Flash streaming endpoint
+│       ├── mark-check/route.ts     # ISI vision verification endpoint
+│       ├── license-check/route.ts  # CM/L license registry validation
+│       └── complaints/route.ts     # Complaint submission handler
+│
+├── components/                     # Shared React components
+│   ├── GigwHeader.tsx              # Govt GIGW-compliant header
+│   ├── GigwFooter.tsx              # Statutory footer with disclaimer
+│   ├── Navbar.tsx                  # Responsive navigation
+│   ├── MobileTabBar.tsx            # Accessible mobile bottom bar
+│   ├── ContactBlock.tsx            # BIS helpline / office block
+│   └── StateEmblem.tsx             # State emblem renderer
+│
+├── lib/                            # Core integrations
+│   ├── gemini.ts                   # Gemini 3.8 Vision + Text client
+│   ├── supabase.ts                 # Supabase pgvector RAG client
+│   └── fallbacks.ts                # Offline-resilient static fallbacks
+│
+├── data/                           # Canonical static data
+│   ├── standards.ts                # IS code definitions & QCO metadata
+│   ├── licenses_mock.ts            # CM/L license sample registry
+│   └── bisOffices.ts               # Regional BIS office directory
+│
+├── docs/
+│   ├── assets/                     # Hero SVG, 16:9 feature screenshots, GIFs
+│   ├── certificate/                # SIH 2026 Certificate of Participation
+│   └── presentation/               # SIH 2026 idea deck (Team Strophoid)
+│
+├── public/                         # Static assets (logos, emblems)
+├── next.config.ts                  # Next.js configuration
+├── tailwind.config.*               # Tailwind CSS v4 config
+└── package.json                    # Dependency manifest
+```
+
+---
+
 ## Local Development
 
 ```bash
