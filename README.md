@@ -264,6 +264,18 @@ pnpm dev
 
 ---
 
+## Star History
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ishangupta1412/BIS-AI-Saathi&type=Date)](https://star-history.com/#ishangupta1412/BIS-AI-Saathi&Date)
+
+<sub>Live real-time telemetry chart tracked automatically via GitHub API</sub>
+
+</div>
+
+---
+
 ## Project Context & Attribution
 
 - **Competition**: Smart India Hackathon 2026 (Problem Statement: SIH26107)
