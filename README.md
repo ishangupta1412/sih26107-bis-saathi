@@ -268,6 +268,6 @@ pnpm dev
 
 - **Competition**: Smart India Hackathon 2026 (Problem Statement: SIH26107)
 - **Team**: Team Strophoid (Certificate of Participation awarded to Ishan Gupta)
-- **Lead Developer**: [Ishan Gupta](https://github.com/ishangupta1412) ([LinkedIn](https://www.linkedin.com/in/ishan-gupta-976192419))
+- **Lead Developer**: [Ishan Gupta](https://github.com/ishangupta1412) ([LinkedIn](https://www.linkedin.com/in/ishan14md))
 - **Authority**: Bureau of Indian Standards (BIS), Ministry of Consumer Affairs, Food & Public Distribution
 - **License**: [MIT License](./LICENSE)
