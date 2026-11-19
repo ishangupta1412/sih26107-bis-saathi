@@ -14,10 +14,11 @@ export async function generateWithGemini(
 ): Promise<string> {
   const apiKey = (process.env.GEMINI_API_KEY || FALLBACK_KEY).trim();
   const modelsToTry = [
-    process.env.GEMINI_MODEL || 'gemini-3.8-flash',
+    process.env.GEMINI_MODEL || 'gemini-flash-lite-latest',
+    'gemini-flash-lite-latest',
+    'gemini-3.5-flash-lite',
+    'gemini-3-flash-preview',
     'gemini-3.8-flash',
-    'gemini-3.6-flash',
-    'gemini-3.1-flash-lite',
   ];
 
   // Convert parts to standard Gemini format
@@ -51,7 +52,7 @@ export async function generateWithGemini(
     try {
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 12000); // 12s timeout
+      const timeoutId = setTimeout(() => controller.abort(), 4000); // 4s timeout
 
       const res = await fetch(url, {
         method: 'POST',

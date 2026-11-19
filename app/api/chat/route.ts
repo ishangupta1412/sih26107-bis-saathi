@@ -94,9 +94,10 @@ async function callGemini(
   const apiKey = (process.env.GEMINI_API_KEY || FALLBACK_KEY).trim();
 
   const models = [
+    'gemini-flash-lite-latest',
+    'gemini-3.5-flash-lite',
+    'gemini-3-flash-preview',
     'gemini-3.8-flash',
-    'gemini-3.6-flash',
-    'gemini-3.1-flash-lite',
   ];
 
   const parts: any[] = [];
@@ -121,7 +122,7 @@ async function callGemini(
   for (const model of models) {
     try {
       const controller = new AbortController();
-      const tid = setTimeout(() => controller.abort(), 18000); // 18s timeout per model
+      const tid = setTimeout(() => controller.abort(), 4000); // 4s fast timeout per model
 
       const res = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
