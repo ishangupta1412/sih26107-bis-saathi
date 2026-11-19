@@ -479,8 +479,8 @@ What product or standard would you like to explore today?`;
     'election', 'vote', 'modi', 'rahul', 'politics', 'love'
   ];
 
-  const isOutOfDomain = outOfDomainKeywords.some(kw => q.includes(kw)) &&
-    !q.includes('bis') && !q.includes('standard') && !q.includes('isi') && !q.includes('mark') && !q.includes('safety');
+  const isOutOfDomain = outOfDomainKeywords.some(kw => new RegExp(`\\b${kw}\\b`, 'i').test(q)) &&
+    !q.includes('bis') && !q.includes('standard') && !q.includes('isi') && !q.includes('mark') && !q.includes('safety') && !q.includes('steel') && !q.includes('helmet') && !q.includes('cooker');
 
   if (isOutOfDomain) {
     const refusal = isHi
